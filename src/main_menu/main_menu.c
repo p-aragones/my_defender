@@ -5,7 +5,10 @@
 ** main_menu
 */
 
-int main_menu()
+#include "defender.h"
+
+int main_menu(window_t *window)
 {
+    sfEvent event;
     return (0);
 }
