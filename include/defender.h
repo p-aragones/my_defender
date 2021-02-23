@@ -17,7 +17,7 @@
 
 #include "struct.h"
 
-main_menu(window_t *);
-defender(void);
+int main_menu(window_t *);
+int defender(void);
 
 #endif
