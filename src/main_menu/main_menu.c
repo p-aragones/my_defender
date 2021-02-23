@@ -9,6 +9,10 @@
 
 int main_menu(window_t *window)
 {
-    sfEvent event;
+    while (sfRenderWindow_pollEvent(window->window, &window->event)) {
+        if (window->event.type == sfEvtClosed ||
+        window->event.key.code == sfKeyEscape)
+            sfRenderWindow_close(window->window);
+    }
     return (0);
 }

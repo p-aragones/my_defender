@@ -7,7 +7,18 @@
 
 #include "defender.h"
 
+#ifndef STRUCT
+#define STRUCT
+
 typedef struct window_s {
     sfRenderWindow *window;
     sfVideoMode videoMode;
+    sfEvent event;
 } window_t;
+
+typedef struct menu_s {
+    sfSprite *background_s;
+    sfTexture *background_t;
+}menu_t;
+
+#endif
