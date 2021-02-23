@@ -5,7 +5,7 @@
 ## Makefile
 ##
 
-NAME	=	my_sokoban
+NAME	=	my_defender
 
 CFLAGS	+=	-I ./include/ -I ./lib/include/
 CFLAGS	+=	-lcriterion
