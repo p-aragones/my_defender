@@ -19,5 +19,6 @@
 
 int main_menu(window_t *);
 int defender(void);
+window_t *init_window(window_t *);
 
 #endif
