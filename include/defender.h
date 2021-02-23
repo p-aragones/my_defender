@@ -20,5 +20,6 @@
 int main_menu(window_t *);
 int defender(void);
 window_t *init_window(window_t *);
+elem_t *create_elem(char *path, sfVector2f pos, sfIntRect rect);
 
 #endif

@@ -7,10 +7,26 @@
 
 #include "main_menu.h"
 
+button_t **init_buttons(button_t **buttons)
+{
+    buttons = malloc(sizeof(button_t *) * N_BUTTONS);
+
+    buttons[0]->elem = create_elem(PLAY_BTN, POS_PLAY, RECT_PLAY);
+    buttons[1] = NULL;
+    return (buttons);
+}
+
 menu_t *init_main_menu(menu_t *menu)
 {
-    menu->background_s = sfSprite_create();
-    menu->background_t = sfTexture_createFromFile("../resources/sprites/\
-    background/main_menu_background.png", NULL);
+    menu = malloc(sizeof(menu_t));
+
+    if (menu == NULL)
+        return (NULL);
+    menu->elem = create_elem(MENU_BACKGROUND, POS_BG, RECT_BG);
+    if (!menu->elem)
+        return (NULL);
+    menu->buttons = init_buttons(menu->buttons);
+    if (!menu->buttons)
+        return (NULL);
     return (menu);
 }

@@ -8,7 +8,7 @@
 NAME	=	my_defender
 
 CFLAGS	+=	-I ./include/ -I ./lib/include/
-CFLAGS	+=	-lcriterion
+CFLAGS	+=	-lcriterion -g3
 
 LDLIBS	+=	-L./lib/ -lmy
 

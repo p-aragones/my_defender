@@ -16,14 +16,16 @@
 #include <stdio.h>
 
 #include "struct.h"
+#include "macros.h"
 
 typedef struct menu_s {
-    sfSprite *background_s;
-    sfTexture *background_t;
+    elem_t *elem;
+    button_t **buttons;
 } menu_t;
 
 int lunch_button(window_t *window, button_t *button, sfEvent *event);
 int analyse_event(window_t *window, sfEvent event, button_t **buttons);
+menu_t *init_main_menu(menu_t *menu);
 
 
 #endif
