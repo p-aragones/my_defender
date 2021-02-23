@@ -1,0 +1,29 @@
+/*
+** EPITECH PROJECT, 2020
+** B-MUL-200-BAR-2-1-mydefender-leon.ducasse
+** File description:
+** main_menu.h
+*/
+
+#ifndef MAIN_MENU_H
+#define MAIN_MENU_H
+
+#include <SFML/Config.h>
+#include <SFML/Graphics.h>
+#include <SFML/Audio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <stdio.h>
+
+#include "struct.h"
+
+typedef struct menu_s {
+    sfSprite *background_s;
+    sfTexture *background_t;
+} menu_t;
+
+int lunch_button(window_t *window, button_t *button, sfEvent *event);
+int analyse_event(window_t *window, sfEvent event, button_t **buttons);
+
+
+#endif

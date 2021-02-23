@@ -5,7 +5,7 @@
 ** init_main_menu
 */
 
-#include "defender.h"
+#include "main_menu.h"
 
 menu_t *init_main_menu(menu_t *menu)
 {

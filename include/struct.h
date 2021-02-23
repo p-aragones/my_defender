@@ -10,15 +10,23 @@
 #ifndef STRUCT
 #define STRUCT
 
+typedef struct elem_s {
+    sfSprite *sprite;
+    sfTexture* texture;
+    sfVector2f pos;
+    sfIntRect rect;
+} elem_t;
+
 typedef struct window_s {
     sfRenderWindow *window;
     sfVideoMode videoMode;
-    sfEvent event;
 } window_t;
 
-typedef struct menu_s {
-    sfSprite *background_s;
-    sfTexture *background_t;
-}menu_t;
+typedef struct button_s {
+    int *(*hover)(window_t *);
+    int *(*click)(window_t *);
+    elem_t *elem;
+    sfTexture *hover_sprite;
+} button_t;
 
 #endif
