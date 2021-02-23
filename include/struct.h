@@ -29,8 +29,8 @@ typedef struct window_s {
 } window_t;
 
 typedef struct button_s {
-    int *(*hover)(window_t *);
-    int *(*click)(window_t *);
+    int *(*hover_fonc)(window_t *);
+    int *(*click_fonc)(window_t *);
     elem_t *elem;
     sfTexture *hover_sprite;
 } button_t;

@@ -7,15 +7,28 @@
 
 #include "main_menu.h"
 
+button_t *init_button(char *path, char *hover, sfVector2f pos, sfIntRect rect)
+{
+    button_t *button = malloc(sizeof(button_t));
+
+    if (!button)
+        return (NULL);
+    button->elem = create_elem(path, pos, rect);
+    button->hover_sprite = sfTexture_createFromFile(hover, NULL);
+    if (!button->elem || !button->hover_sprite)
+        return (NULL);
+    return (button);
+}
+
 button_t **init_buttons(void)
 {
     button_t **buttons = malloc(sizeof(button_t *) * N_BUTTONS);
-    buttons[0] = malloc(sizeof(button_t));
 
-    if (!buttons || !buttons[0])
+    if (!buttons)
         return (NULL);
-    buttons[0]->elem = create_elem(PLAY_BTN, POS_PLAY, RECT_PLAY);
-    buttons[1] = NULL;
+    buttons[0] = init_button(PLAY_BTN, PLAY_HOVER, POS_PLAY, RECT_PLAY);
+    buttons[1] = init_button(EXIT_BTN, EXIT_HOVER, POS_EXIT, RECT_EXIT);
+    buttons[2] = NULL;
     return (buttons);
 }
 
