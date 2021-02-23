@@ -8,6 +8,9 @@
 #ifndef MACROS_H_
 #define MACROS_H_
 
+#define X_WINDOW 1000
+#define Y_WINDOW 563
+
 #define N_BUTTONS 7
 #define PLAY_BTN "resources/sprites/buttons/red/play.png"
 #define PLAY_HOVER "resources/sprites/buttons/blue/play.png"

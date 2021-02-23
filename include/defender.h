@@ -16,6 +16,7 @@
 #include <stdio.h>
 
 #include "struct.h"
+#include "macros.h"
 
 int main_menu(window_t *);
 int defender(void);

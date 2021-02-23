@@ -19,5 +19,6 @@ elem_t *create_elem(char *path, sfVector2f pos, sfIntRect rect)
     elem->rect = rect;
     if (!elem->texture || !elem->sprite)
         return (NULL);
+    sfSprite_setTexture(elem->sprite, elem->texture, sfTrue);
     return (elem);
 }
