@@ -10,8 +10,11 @@
 int main_menu(window_t *window)
 {
     sfEvent event;
-    menu_t *menu = init_main_menu(menu);
+    menu_t *menu = init_main_menu();
 
+    if (!menu)
+        return (84);
+    display(window->window, menu->elem);
     analyse_event(window, event, menu->buttons);
     return (0);
 }

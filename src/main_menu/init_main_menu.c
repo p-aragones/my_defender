@@ -7,26 +7,27 @@
 
 #include "main_menu.h"
 
-button_t **init_buttons(button_t **buttons)
+button_t **init_buttons(void)
 {
-    buttons = malloc(sizeof(button_t *) * N_BUTTONS);
+    button_t **buttons = malloc(sizeof(button_t *) * N_BUTTONS);
+    buttons[0] = malloc(sizeof(button_t));
 
+    if (!buttons || !buttons[0])
+        return (NULL);
     buttons[0]->elem = create_elem(PLAY_BTN, POS_PLAY, RECT_PLAY);
     buttons[1] = NULL;
     return (buttons);
 }
 
-menu_t *init_main_menu(menu_t *menu)
+menu_t *init_main_menu(void)
 {
-    menu = malloc(sizeof(menu_t));
+    menu_t *menu = malloc(sizeof(menu_t));
 
     if (menu == NULL)
         return (NULL);
+    menu->buttons = init_buttons();
     menu->elem = create_elem(MENU_BACKGROUND, POS_BG, RECT_BG);
-    if (!menu->elem)
-        return (NULL);
-    menu->buttons = init_buttons(menu->buttons);
-    if (!menu->buttons)
+    if (!menu->buttons || !menu->elem)
         return (NULL);
     return (menu);
 }

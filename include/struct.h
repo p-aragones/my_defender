@@ -10,6 +10,12 @@
 #ifndef STRUCT
 #define STRUCT
 
+typedef struct clock_struct_s {
+    sfClock *clock;
+    sfTime time;
+    float seconds;
+} clock_struct_t;
+
 typedef struct elem_s {
     sfSprite *sprite;
     sfTexture* texture;

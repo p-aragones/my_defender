@@ -9,6 +9,8 @@
 
 int lunch_button(window_t *window, button_t *button, sfEvent *event)
 {
+    (void)window;
+    (void)event;
     if (sfSprite_getTexture(button->elem->sprite) != button->hover_sprite)
         sfSprite_setTexture(button->elem->sprite,
         button->hover_sprite, sfFalse);

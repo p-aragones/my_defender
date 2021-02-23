@@ -13,4 +13,6 @@
 int get_y_mouse(sfRenderWindow *window);
 int get_x_mouse(sfRenderWindow *window);
 
+void display(sfRenderWindow *window, elem_t *elem);
+
 #endif

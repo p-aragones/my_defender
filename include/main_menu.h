@@ -17,6 +17,7 @@
 
 #include "struct.h"
 #include "macros.h"
+#include "tools.h"
 
 typedef struct menu_s {
     elem_t *elem;
@@ -25,7 +26,7 @@ typedef struct menu_s {
 
 int lunch_button(window_t *window, button_t *button, sfEvent *event);
 int analyse_event(window_t *window, sfEvent event, button_t **buttons);
-menu_t *init_main_menu(menu_t *menu);
+menu_t *init_main_menu(void);
 
 
 #endif

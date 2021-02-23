@@ -7,9 +7,9 @@
 
 #include "defender.h"
 
-window_t *init_window(window_t *window)
+window_t *init_window(void)
 {
-    window = malloc(sizeof(window_t));
+    window_t *window = malloc(sizeof(window_t));
 
     if (window == NULL)
         return (NULL);

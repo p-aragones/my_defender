@@ -8,11 +8,12 @@
 NAME	=	my_defender
 
 CFLAGS	+=	-I ./include/ -I ./lib/include/
-CFLAGS	+=	-lcriterion -g3
+CFLAGS	+=	-lcriterion
+CFLAGS	+=	-g3 -W -Wall -Wextra -Werror
 
 LDLIBS	+=	-L./lib/ -lmy
 
-LIB		=	-l csfml-graphics -l csfml-system -l csfml-audio -g3
+LIB		=	-l csfml-graphics -l csfml-system -l csfml-audio
 
 PATH_SRC	=	./src/
 

@@ -9,7 +9,7 @@
 
 elem_t *create_elem(char *path, sfVector2f pos, sfIntRect rect)
 {
-    elem_t *elem = malloc(sizeof(elem_t *));
+    elem_t *elem = malloc(sizeof(elem_t));
 
     if (elem == NULL)
         return (NULL);
