@@ -20,7 +20,7 @@ int analyse_event(window_t *window, sfEvent event, button_t **buttons)
             get_x_mouse(window->window), get_y_mouse(window->window)))
                 return (lunch_button(window, buttons[x], event));
             else if (sfSprite_getTexture(buttons[x]->elem->sprite)
-            == buttons[x]->hover_sprite)
+            == buttons[x]->hover_texture)
                 sfSprite_setTexture(buttons[x]->elem->sprite,
                 buttons[x]->elem->texture, sfFalse);
             x++;
