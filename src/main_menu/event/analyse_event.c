@@ -7,6 +7,7 @@
 
 #include "main_menu.h"
 #include "tools.h"
+#include <stdbool.h>
 
 int analyse_event(window_t *window, sfEvent event, button_t **buttons)
 {
@@ -17,8 +18,8 @@ int analyse_event(window_t *window, sfEvent event, button_t **buttons)
             sfRenderWindow_close(window->window);
         while (buttons[x]) {
             if (sfIntRect_contains(&buttons[x]->elem->rect,
-            get_x_mouse(window->window), get_y_mouse(window->window)))
-                lunch_button(window, buttons[x], event);
+            get_x_mouse(window->window), get_y_mouse(window->window)) == sfTrue)
+                return (lunch_button(window, buttons[x], event));
             else if (sfSprite_getTexture(buttons[x]->elem->sprite)
             == buttons[x]->hover_texture)
                 sfSprite_setTexture(buttons[x]->elem->sprite,
