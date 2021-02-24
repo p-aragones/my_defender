@@ -14,9 +14,9 @@ menu_t *init_main_menu(window_t *window)
     if (menu == NULL)
         return (NULL);
     menu->buttons = init_buttons(window);
-    menu->elem = create_elem(MENU_BACKGROUND, POS_BG, RECT_BG);
-    sfSprite_setScale(menu->elem->sprite, SCALE_BG);
-    if (!menu->buttons || !menu->elem)
+    menu->background = create_elem(MENU_BACKGROUND, POS_BG, RECT_BG);
+    sfSprite_setScale(menu->background->sprite, SCALE_BG);
+    if (!menu->buttons || !menu->background)
         return (NULL);
     return (menu);
 }

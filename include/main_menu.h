@@ -20,7 +20,7 @@
 #include "tools.h"
 
 typedef struct menu_s {
-    elem_t *elem;
+    elem_t *background;
     button_t **buttons;
 } menu_t;
 

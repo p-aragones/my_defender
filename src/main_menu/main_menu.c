@@ -16,7 +16,7 @@ int main_menu(window_t *window)
     if (!menu)
         return (84);
     analyse_event(window, event, menu->buttons);
-    display(window->window, menu->elem);
+    display(window->window, menu->background);
     while (menu->buttons[x]) {
         display(window->window, menu->buttons[x]->elem);
         x++;
