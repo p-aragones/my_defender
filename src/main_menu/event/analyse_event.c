@@ -26,7 +26,7 @@ int analyse_event(window_t *window, sfEvent event, button_t **buttons)
     x = 0;
     while (buttons[x]) {
         if (mouse_hover(window->window, buttons[x]) == 1)
-            return (lunch_button(window, buttons[x], event));
+            buttons[x]->hover_fonc(window, buttons[x]);
         x++;
     }
     return (0);

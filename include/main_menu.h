@@ -24,7 +24,6 @@ typedef struct menu_s {
     button_t **buttons;
 } menu_t;
 
-int lunch_button(window_t *window, button_t *button, sfEvent event);
 int analyse_event(window_t *window, sfEvent event, button_t **buttons);
 menu_t *init_main_menu(window_t *window);
 
