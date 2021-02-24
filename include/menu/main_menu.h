@@ -15,9 +15,9 @@
 #include <unistd.h>
 #include <stdio.h>
 
-#include "struct.h"
-#include "macros.h"
-#include "tools.h"
+#include "defender.h"
+#include "struct_menu.h"
+#include "maccro_menu.h"
 
 int analyse_event(window_t *, sfEvent, button_t **, menu_t *);
 menu_t *init_main_menu(window_t *window);

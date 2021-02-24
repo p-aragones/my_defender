@@ -8,6 +8,7 @@
 #ifndef TOOLS_H
 #define TOOLS_H
 
+#include "struct_menu.h"
 #include "struct.h"
 
 int get_y_mouse(sfRenderWindow *window);
