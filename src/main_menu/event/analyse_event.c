@@ -14,7 +14,7 @@ int analyse_event(window_t *window, sfEvent event, button_t **buttons)
     int x = 0;
 
     while (sfRenderWindow_pollEvent(window->window, &event)) {
-        if (event.type == sfEvtClosed)
+        if (event.type == sfEvtClosed || event.key.code == sfKeyEscape)
             sfRenderWindow_close(window->window);
         while (buttons[x]) {
             if (mouse_hover(window->window, buttons[x]) == 1 &&
