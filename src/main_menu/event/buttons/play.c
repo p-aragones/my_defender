@@ -17,6 +17,6 @@ int play_click(window_t *window, button_t *button)
 int play_hover(window_t *window, button_t *button)
 {
     (void)window;
-    sfSprite_setTexture(button->elem->sprite, button->elem->texture, sfFalse);
+    sfSprite_setTexture(button->elem->sprite, button->hover_texture, sfFalse);
     return (0);
 }

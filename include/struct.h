@@ -32,7 +32,7 @@ typedef struct button_s {
     int (*hover_fonc)(window_t *, struct button_s *button);
     int (*click_fonc)(window_t *, struct button_s *button);
     elem_t *elem;
-    sfTexture *hover_sprite;
+    sfTexture *hover_texture;
 } button_t;
 
 #endif
