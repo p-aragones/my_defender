@@ -14,8 +14,8 @@ button_t *init_button(char *path, sfVector2f pos, sfIntRect rect, char *hover)
     if (!button)
         return (NULL);
     button->elem = create_elem(path, pos, rect);
-    button->hover_sprite = sfTexture_createFromFile(hover, NULL);
-    if (!button->elem || !button->hover_sprite)
+    button->hover_texture = sfTexture_createFromFile(hover, NULL);
+    if (!button->elem || !button->hover_texture)
         return (NULL);
     return (button);
 }
@@ -30,8 +30,7 @@ button_t **init_buttons(window_t *window)
     buttons[0] = init_button(PLAY_INFO, PLAY_HOVER);
     buttons[0]->hover_fonc = &play_hover;
     buttons[0]->click_fonc = &play_click;
-    buttons[1] = init_button(EXIT_INFO, EXIT_HOVER);
-    buttons[2] = NULL;
+    buttons[1] = NULL;
     return (buttons);
 }
 
