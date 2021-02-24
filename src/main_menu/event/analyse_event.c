@@ -9,7 +9,8 @@
 #include "tools.h"
 #include <stdbool.h>
 
-int analyse_event(window_t *window, sfEvent event, button_t **buttons)
+int analyse_event(window_t *window, sfEvent event,
+button_t **buttons, menu_t *menu)
 {
     int x = 0;
 
@@ -19,14 +20,14 @@ int analyse_event(window_t *window, sfEvent event, button_t **buttons)
         while (buttons[x]) {
             if (mouse_hover(window->window, buttons[x]) == 1 &&
             event.type == sfEvtMouseButtonPressed)
-                buttons[x]->click_fonc(window, buttons[x]);
+                return (buttons[x]->click_fonc(window, menu, buttons[x]));
             x++;
         }
     }
     x = 0;
     while (buttons[x]) {
         if (mouse_hover(window->window, buttons[x]) == 1)
-            buttons[x]->hover_fonc(window, buttons[x]);
+            buttons[x]->hover_fonc(buttons[x]);
         x++;
     }
     return (0);

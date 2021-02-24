@@ -6,6 +6,7 @@
 */
 
 #include "defender.h"
+#include "main_menu.h"
 
 #ifndef STRUCT
 #define STRUCT
@@ -28,13 +29,19 @@ typedef struct window_s {
     sfVideoMode videoMode;
 } window_t;
 
+typedef struct menu_s {
+    elem_t *elem;
+    struct button_s **buttons;
+} menu_t;
+
 typedef struct button_s {
-    int (*hover_fonc)(window_t *, struct button_s *button);
-    int (*click_fonc)(window_t *, struct button_s *button);
+    int (*hover_fonc)(struct button_s *button);
+    int (*click_fonc)(window_t *, menu_t *, struct button_s *button);
     sfVector2i size;
     elem_t *elem;
     sfTexture *hover_texture;
     sfTexture *click_texture;
 } button_t;
+
 
 #endif

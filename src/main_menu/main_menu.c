@@ -15,11 +15,13 @@ int main_menu(window_t *window)
 
     if (!menu)
         return (84);
-    analyse_event(window, event, menu->buttons);
-    display(window->window, menu->elem);
-    while (menu->buttons[x]) {
-        display(window->window, menu->buttons[x]->elem);
-        x++;
+    analyse_event(window, event, menu->buttons, menu);
+    if (sfRenderWindow_isOpen(window->window)) {
+        display(window->window, menu->elem);
+        while (menu->buttons[x]) {
+            display(window->window, menu->buttons[x]->elem);
+            x++;
+        }
     }
     return (0);
 }

@@ -13,8 +13,9 @@
 
 #define N_BUTTONS 7
 
-#define FONC_HOVER int (*hover_fonc)(window_t *, struct button_s *button)
-#define FONC_CLICK int (*click_fonc)(window_t *, struct button_s *button)
+#define FONC_HOVER int (*hover_fonc)(struct button_s *button)
+#define FONC_CLICK int (*click_fonc)(window_t *, menu_t *, \
+struct button_s *button)
 
 #define SCALE_BTN (sfVector2f){3, 3}
 #define PLAY_BTN "resources/sprites/buttons/red/play.png"

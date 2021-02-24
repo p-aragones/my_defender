@@ -19,20 +19,16 @@
 #include "macros.h"
 #include "tools.h"
 
-typedef struct menu_s {
-    elem_t *elem;
-    button_t **buttons;
-} menu_t;
-
-int analyse_event(window_t *window, sfEvent event, button_t **buttons);
+int analyse_event(window_t *, sfEvent, button_t **, menu_t *);
 menu_t *init_main_menu(window_t *window);
 button_t **init_buttons(window_t *window);
 
-int play_hover(window_t *window, button_t *button);
-int play_click(window_t *window, button_t *button);
+int play_hover(button_t *button);
+int play_click(window_t *window, menu_t *, button_t *button);
 
-int exit_hover(window_t *window, button_t *button);
-int exit_click(window_t *window, button_t *button);
+int exit_hover(button_t *button);
+int exit_click(window_t *window, menu_t *, button_t *button);
 
+void free_main_menu(menu_t *menu);
 
 #endif

@@ -17,4 +17,7 @@ int mouse_hover(sfRenderWindow *window, button_t *button);
 
 void display(sfRenderWindow *window, elem_t *elem);
 
+void free_elem(elem_t *elem);
+void free_buttons(button_t **buttons);
+
 #endif
