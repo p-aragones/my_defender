@@ -12,8 +12,10 @@
 #define Y_WINDOW 563
 
 #define N_BUTTONS 7
+
 #define PLAY_BTN "resources/sprites/buttons/red/play.png"
 #define PLAY_HOVER "resources/sprites/buttons/blue/play.png"
+#define PLAY_CLICK "resources/sprites/buttons/pressed/play.png"
 #define POS_PLAY (sfVector2f){X_WINDOW / 2, Y_WINDOW / 2}
 #define RECT_PLAY (sfIntRect){0, 0, 49, 20}
 #define SIZE_PLAY (sfVector2i){49, 20}
@@ -22,6 +24,7 @@
 
 #define EXIT_BTN "resources/sprites/buttons/red/exit.png"
 #define EXIT_HOVER "resources/sprites/buttons/blue/exit.png"
+#define EXIT_CLICK "resources/sprites/buttons/pressed/exit.png"
 #define POS_EXIT (sfVector2f){X_WINDOW / 2, Y_WINDOW / 2 + 50}
 #define RECT_EXIT (sfIntRect){0, 0, 49, 20}
 #define SIZE_QUIT (sfVector2i){49, 20}

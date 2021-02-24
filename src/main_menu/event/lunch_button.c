@@ -9,9 +9,10 @@
 
 int lunch_button(window_t *window, button_t *button, sfEvent event)
 {
-    if (event.type == sfEvtMouseButtonPressed)
+    (void)event;
+    /* if (event.type == sfEvtMouseButtonPressed)
         return (button->click_fonc(window, button));
-    else
+    else */
         return (button->hover_fonc(window, button));
     return (0);
 }

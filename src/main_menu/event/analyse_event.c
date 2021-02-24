@@ -16,7 +16,14 @@ int analyse_event(window_t *window, sfEvent event, button_t **buttons)
     while (sfRenderWindow_pollEvent(window->window, &event)) {
         if (event.type == sfEvtClosed)
             sfRenderWindow_close(window->window);
+        while (buttons[x]) {
+            if (mouse_hover(window->window, buttons[x]) == 1 &&
+            event.type == sfEvtMouseButtonPressed)
+                buttons[x]->click_fonc(window, buttons[x]);
+            x++;
+        }
     }
+    x = 0;
     while (buttons[x]) {
         if (mouse_hover(window->window, buttons[x]) == 1)
             return (lunch_button(window, buttons[x], event));

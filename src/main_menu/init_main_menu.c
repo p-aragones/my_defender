@@ -7,12 +7,13 @@
 
 #include "main_menu.h"
 
-button_t *init_button_fonc(button_t *button, char *hover)
+button_t *init_button_fonc(button_t *button, char *hover, char *click)
 {
     button->hover_fonc = &play_hover;
     button->click_fonc = &play_click;
     button->hover_texture = sfTexture_createFromFile(hover, NULL);
-    if (!button->hover_texture)
+    button->click_texture = sfTexture_createFromFile(click, NULL);
+    if (!button->hover_texture || !button->click_texture)
         return (NULL);
     return (button);
 }
@@ -39,9 +40,9 @@ button_t **init_buttons(window_t *window)
         return (NULL);
     (void)window;
     buttons[0] = init_button_elem(PLAY_INFO);
-    buttons[0] = init_button_fonc(buttons[0], PLAY_HOVER);
+    buttons[0] = init_button_fonc(buttons[0], PLAY_HOVER, PLAY_CLICK);
     buttons[1] = init_button_elem(EXIT_INFO);
-    buttons[1] = init_button_fonc(buttons[1], EXIT_HOVER);
+    buttons[1] = init_button_fonc(buttons[1], EXIT_HOVER, EXIT_CLICK);
     buttons[2] = NULL;
     if (!buttons[0])
         return (NULL);

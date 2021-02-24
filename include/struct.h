@@ -34,6 +34,7 @@ typedef struct button_s {
     sfVector2i size;
     elem_t *elem;
     sfTexture *hover_texture;
+    sfTexture *click_texture;
 } button_t;
 
 #endif

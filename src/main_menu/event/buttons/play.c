@@ -10,7 +10,7 @@
 int play_click(window_t *window, button_t *button)
 {
     (void)window;
-    (void)button;
+    sfSprite_setTexture(button->elem->sprite, button->click_texture, sfTrue);
     return (0);
 }
 
