@@ -15,11 +15,11 @@ button_t **buttons, menu_t *menu)
     int x = 0;
 
     while (sfRenderWindow_pollEvent(window->window, &event)) {
-        if (event.type == sfEvtClosed || event.key.code == sfKeyEscape)
+        if (event.type == sfEvtClosed)
             sfRenderWindow_close(window->window);
         while (buttons[x]) {
-            if (mouse_hover(window->window, buttons[x]) == 1 &&
-            event.type == sfEvtMouseButtonPressed)
+            if (event.type == sfEvtMouseButtonPressed &&
+            mouse_hover(window->window, buttons[x]) == 1)
                 return (buttons[x]->click_fonc(window, menu, buttons[x]));
             x++;
         }
@@ -28,6 +28,9 @@ button_t **buttons, menu_t *menu)
     while (buttons[x]) {
         if (mouse_hover(window->window, buttons[x]) == 1)
             buttons[x]->hover_fonc(buttons[x]);
+        else
+            sfSprite_setTexture(buttons[x]->elem->sprite,
+            buttons[x]->elem->texture, sfTrue);
         x++;
     }
     return (0);

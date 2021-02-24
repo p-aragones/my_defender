@@ -13,7 +13,7 @@ int exit_click(window_t *window, menu_t *menu, button_t *button)
     free_main_menu(menu);
     sfRenderWindow_close(window->window);
     free(window);
-    return (0);
+    return (1);
 }
 
 int exit_hover(button_t *button)

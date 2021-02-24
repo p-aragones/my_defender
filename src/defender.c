@@ -10,15 +10,12 @@
 int defender(void)
 {
     window_t *window = init_window();
-    clock_struct_t *clock = init_clock();
 
-    if (!window || !clock)
+    if (!window)
         return (84);
     while (sfRenderWindow_isOpen(window->window)) {
-        sfRenderWindow_clear(window->window, sfBlack);
-        main_menu(window);
-        clock_loop(clock);
-        sfRenderWindow_display(window->window);
+        if (main_menu(window) == 1)
+            return (0);
     }
     return (0);
 }
