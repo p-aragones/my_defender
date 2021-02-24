@@ -40,7 +40,9 @@ button_t **init_buttons(window_t *window)
     (void)window;
     buttons[0] = init_button_elem(PLAY_INFO);
     buttons[0] = init_button_fonc(buttons[0], PLAY_HOVER);
-    buttons[1] = NULL;
+    buttons[1] = init_button_elem(EXIT_INFO);
+    buttons[1] = init_button_fonc(buttons[1], EXIT_HOVER);
+    buttons[2] = NULL;
     if (!buttons[0])
         return (NULL);
     return (buttons);
