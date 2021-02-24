@@ -26,9 +26,13 @@ typedef struct menu_s {
 
 int analyse_event(window_t *window, sfEvent event, button_t **buttons);
 menu_t *init_main_menu(window_t *window);
+button_t **init_buttons(window_t *window);
 
 int play_hover(window_t *window, button_t *button);
 int play_click(window_t *window, button_t *button);
+
+int exit_hover(window_t *window, button_t *button);
+int exit_click(window_t *window, button_t *button);
 
 
 #endif

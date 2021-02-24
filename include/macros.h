@@ -13,6 +13,9 @@
 
 #define N_BUTTONS 7
 
+#define FONC_HOVER int (*hover_fonc)(window_t *, struct button_s *button)
+#define FONC_CLICK int (*click_fonc)(window_t *, struct button_s *button)
+
 #define SCALE_BTN (sfVector2f){3, 3}
 #define PLAY_BTN "resources/sprites/buttons/red/play.png"
 #define PLAY_HOVER "resources/sprites/buttons/blue/play.png"
@@ -21,6 +24,8 @@
 #define RECT_PLAY (sfIntRect){0, 0, 49, 20}
 #define SIZE_PLAY (sfVector2i){49, 20}
 #define PLAY_INFO PLAY_BTN, POS_PLAY, RECT_PLAY, SIZE_PLAY
+#define PLAY_FONC_C play_click
+#define PLAY_FONC_H play_hover
 
 
 #define EXIT_BTN "resources/sprites/buttons/red/exit.png"
@@ -30,6 +35,8 @@
 #define RECT_EXIT (sfIntRect){0, 0, 49, 20}
 #define SIZE_QUIT (sfVector2i){49, 20}
 #define EXIT_INFO EXIT_BTN, POS_EXIT, RECT_EXIT, SIZE_QUIT
+#define EXIT_FONC_C exit_click
+#define EXIT_FONC_H exit_hover
 
 #define MENU_BACKGROUND "resources/sprites/background/main_menu_background.png"
 #define POS_BG (sfVector2f){0, 0}
