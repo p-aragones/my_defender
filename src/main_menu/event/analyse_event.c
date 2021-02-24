@@ -9,6 +9,20 @@
 #include "tools.h"
 #include <stdbool.h>
 
+void change_texture(window_t *window, button_t **buttons)
+{
+    int x = 0;
+
+    while (buttons[x]) {
+        if (mouse_hover(window->window, buttons[x]) == 1)
+            buttons[x]->hover_fonc(buttons[x]);
+        else
+            sfSprite_setTexture(buttons[x]->elem->sprite,
+            buttons[x]->elem->texture, sfTrue);
+        x++;
+    }
+}
+
 int analyse_event(window_t *window, sfEvent event,
 button_t **buttons, menu_t *menu)
 {
@@ -24,14 +38,6 @@ button_t **buttons, menu_t *menu)
             x++;
         }
     }
-    x = 0;
-    while (buttons[x]) {
-        if (mouse_hover(window->window, buttons[x]) == 1)
-            buttons[x]->hover_fonc(buttons[x]);
-        else
-            sfSprite_setTexture(buttons[x]->elem->sprite,
-            buttons[x]->elem->texture, sfTrue);
-        x++;
-    }
+    change_texture(window, buttons);
     return (0);
 }
