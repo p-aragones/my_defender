@@ -26,6 +26,7 @@ sfIntRect rect, sfVector2i size)
     if (!button)
         return (NULL);
     button->elem = create_elem(path, pos, rect);
+    sfSprite_setScale(button->elem->sprite, SCALE_BTN);
     button->size = size;
     if (!button->elem)
         return (NULL);
@@ -57,6 +58,7 @@ menu_t *init_main_menu(window_t *window)
         return (NULL);
     menu->buttons = init_buttons(window);
     menu->elem = create_elem(MENU_BACKGROUND, POS_BG, RECT_BG);
+    sfSprite_setScale(menu->elem->sprite, SCALE_BG);
     if (!menu->buttons || !menu->elem)
         return (NULL);
     return (menu);

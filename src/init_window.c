@@ -17,7 +17,7 @@ window_t *init_window(void)
     window->videoMode.height = Y_WINDOW;
     window->videoMode.width = X_WINDOW;
     window->window = sfRenderWindow_create(window->videoMode,
-    "my_defender", sfClose, NULL);
+    "my_defender", sfFullscreen, NULL);
     sfRenderWindow_setFramerateLimit(window->window, 60);
     return (window);
 }
