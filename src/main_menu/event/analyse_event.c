@@ -17,8 +17,7 @@ int analyse_event(window_t *window, sfEvent event, button_t **buttons)
         if (event.type == sfEvtClosed)
             sfRenderWindow_close(window->window);
         while (buttons[x]) {
-            if (sfIntRect_contains(&buttons[x]->elem->rect,
-            get_x_mouse(window->window), get_y_mouse(window->window)) == sfTrue)
+            if (mouse_hover(window->window, buttons[x]) == 1)
                 return (lunch_button(window, buttons[x], event));
             else if (sfSprite_getTexture(buttons[x]->elem->sprite)
             == buttons[x]->hover_texture)
