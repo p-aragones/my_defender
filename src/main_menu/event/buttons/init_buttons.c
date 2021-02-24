@@ -52,7 +52,7 @@ button_t **init_buttons(window_t *window)
     buttons[1] = init_button_fonc(buttons[1], EXIT_FONC_H, EXIT_FONC_C);
     buttons[1] = init_button_texture(buttons[1], EXIT_HOVER, EXIT_CLICK);
     buttons[2] = NULL;
-    if (!buttons[0])
+    if (!buttons[0] || !buttons[1])
         return (NULL);
     return (buttons);
 }
