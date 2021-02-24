@@ -16,15 +16,11 @@ int analyse_event(window_t *window, sfEvent event, button_t **buttons)
     while (sfRenderWindow_pollEvent(window->window, &event)) {
         if (event.type == sfEvtClosed)
             sfRenderWindow_close(window->window);
-        while (buttons[x]) {
-            if (mouse_hover(window->window, buttons[x]) == 1)
-                return (lunch_button(window, buttons[x], event));
-            else if (sfSprite_getTexture(buttons[x]->elem->sprite)
-            == buttons[x]->hover_texture)
-                sfSprite_setTexture(buttons[x]->elem->sprite,
-                buttons[x]->elem->texture, sfFalse);
-            x++;
-        }
+    }
+    while (buttons[x]) {
+        if (mouse_hover(window->window, buttons[x]) == 1)
+            return (lunch_button(window, buttons[x], event));
+        x++;
     }
     return (0);
 }
