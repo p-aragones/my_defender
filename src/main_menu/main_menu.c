@@ -10,7 +10,7 @@
 int main_menu(window_t *window)
 {
     sfEvent event;
-    menu_t *menu = init_main_menu();
+    menu_t *menu = init_main_menu(window);
     int x = 0;
 
     if (!menu)

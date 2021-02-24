@@ -20,25 +20,28 @@ button_t *init_button(char *path, sfVector2f pos, sfIntRect rect, char *hover)
     return (button);
 }
 
-button_t **init_buttons(void)
+button_t **init_buttons(window_t *window)
 {
     button_t **buttons = malloc(sizeof(button_t *) * N_BUTTONS);
 
     if (!buttons)
         return (NULL);
+    (void)window;
     buttons[0] = init_button(PLAY_INFO, PLAY_HOVER);
+    buttons[0]->hover_fonc = &play_hover;
+    buttons[0]->click_fonc = &play_click;
     buttons[1] = init_button(EXIT_INFO, EXIT_HOVER);
     buttons[2] = NULL;
     return (buttons);
 }
 
-menu_t *init_main_menu(void)
+menu_t *init_main_menu(window_t *window)
 {
     menu_t *menu = malloc(sizeof(menu_t));
 
     if (menu == NULL)
         return (NULL);
-    menu->buttons = init_buttons();
+    menu->buttons = init_buttons(window);
     menu->elem = create_elem(MENU_BACKGROUND, POS_BG, RECT_BG);
     if (!menu->buttons || !menu->elem)
         return (NULL);
