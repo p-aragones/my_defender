@@ -7,12 +7,11 @@
 
 #include "main_menu.h"
 
-int lunch_button(window_t *window, button_t *button, sfEvent *event)
+int lunch_button(window_t *window, button_t *button, sfEvent event)
 {
-    (void)window;
-    (void)event;
-    if (sfSprite_getTexture(button->elem->sprite) != button->hover_sprite)
-        sfSprite_setTexture(button->elem->sprite,
-        button->hover_sprite, sfFalse);
+    if (event.type == sfEvtMouseButtonPressed)
+        return (button->click_fonc(window, button));
+    else
+        return (button->hover_fonc(window, button));
     return (0);
 }

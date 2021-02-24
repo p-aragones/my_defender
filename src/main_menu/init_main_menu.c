@@ -7,7 +7,7 @@
 
 #include "main_menu.h"
 
-button_t *init_button(char *path, char *hover, sfVector2f pos, sfIntRect rect)
+button_t *init_button(char *path, sfVector2f pos, sfIntRect rect, char *hover)
 {
     button_t *button = malloc(sizeof(button_t));
 
@@ -26,8 +26,8 @@ button_t **init_buttons(void)
 
     if (!buttons)
         return (NULL);
-    buttons[0] = init_button(PLAY_BTN, PLAY_HOVER, POS_PLAY, RECT_PLAY);
-    buttons[1] = init_button(EXIT_BTN, EXIT_HOVER, POS_EXIT, RECT_EXIT);
+    buttons[0] = init_button(PLAY_INFO, PLAY_HOVER);
+    buttons[1] = init_button(EXIT_INFO, EXIT_HOVER);
     buttons[2] = NULL;
     return (buttons);
 }

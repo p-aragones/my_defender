@@ -28,5 +28,8 @@ int lunch_button(window_t *window, button_t *button, sfEvent *event);
 int analyse_event(window_t *window, sfEvent event, button_t **buttons);
 menu_t *init_main_menu(void);
 
+int play_hover(window_t *window, button_t *button);
+int play_click(window_t *window, button_t *button);
+
 
 #endif
