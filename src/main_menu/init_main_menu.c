@@ -7,7 +7,6 @@
 
 #include "main_menu.h"
 
-
 menu_t *init_main_menu(window_t *window)
 {
     menu_t *menu = malloc(sizeof(menu_t));
