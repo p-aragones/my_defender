@@ -5,10 +5,10 @@
 ** struct
 */
 
-#include "defender.h"
+#ifndef STRUCT_H
+#define STRUCT_H
 
-#ifndef STRUCT
-#define STRUCT
+#include "csfml_lib.h"
 
 typedef struct clock_struct_s {
     sfClock *clock;
@@ -27,14 +27,5 @@ typedef struct window_s {
     sfRenderWindow *window;
     sfVideoMode videoMode;
 } window_t;
-
-typedef struct button_s {
-    int (*hover_fonc)(window_t *, struct button_s *button);
-    int (*click_fonc)(window_t *, struct button_s *button);
-    sfVector2i size;
-    elem_t *elem;
-    sfTexture *hover_texture;
-    sfTexture *click_texture;
-} button_t;
 
 #endif

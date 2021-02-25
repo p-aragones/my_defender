@@ -7,7 +7,7 @@
 
 NAME	=	my_defender
 
-CFLAGS	+=	-I ./include/ -I ./lib/include/
+CFLAGS	+=	-I ./include/ -I ./include/game/ -I ./include/menu/ -I ./include/pause/ -I ./lib/include/
 CFLAGS	+=	-lcriterion
 CFLAGS	+=	-g3 -W -Wall -Wextra -Werror
 

@@ -11,15 +11,19 @@ int main_menu(window_t *window)
 {
     sfEvent event;
     menu_t *menu = init_main_menu(window);
-    int x = 0;
+    clock_struct_t *clock = init_clock();
 
-    if (!menu)
+    if (!menu || !clock)
         return (84);
-    analyse_event(window, event, menu->buttons);
-    display(window->window, menu->background);
-    while (menu->buttons[x]) {
-        display(window->window, menu->buttons[x]->elem);
-        x++;
+    while (1) {
+        sfRenderWindow_clear(window->window, sfBlack);
+        if (analyse_event(window, event, menu->buttons, menu) == 0) {
+            display_main_menu(window, menu);
+            clock_loop(clock);
+            sfRenderWindow_display(window->window);
+        }
+        else
+            return (1);
     }
     return (0);
 }
