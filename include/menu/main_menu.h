@@ -15,6 +15,7 @@
 #include <unistd.h>
 #include <stdio.h>
 
+#include "csfml_lib.h"
 #include "defender.h"
 #include "struct_menu.h"
 #include "maccro_menu.h"

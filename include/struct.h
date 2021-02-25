@@ -8,6 +8,8 @@
 #ifndef STRUCT_H
 #define STRUCT_H
 
+#include "csfml_lib.h"
+
 typedef struct clock_struct_s {
     sfClock *clock;
     sfTime time;

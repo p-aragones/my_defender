@@ -9,6 +9,7 @@
 #define STRUCT_MENU_H
 
 #include "struct.h"
+#include "csfml_lib.h"
 
 typedef struct menu_s {
     elem_t *elem;

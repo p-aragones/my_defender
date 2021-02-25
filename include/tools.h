@@ -8,8 +8,11 @@
 #ifndef TOOLS_H
 #define TOOLS_H
 
+#include "csfml_lib.h"
 #include "struct_menu.h"
 #include "struct.h"
+#include "maccro_menu.h"
+#include "macros.h"
 
 int get_y_mouse(sfRenderWindow *window);
 int get_x_mouse(sfRenderWindow *window);
