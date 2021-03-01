@@ -15,7 +15,7 @@ int main_menu(window_t *window)
 
     if (!menu || !clock)
         return (84);
-    while (1) {
+    while (sfRenderWindow_isOpen(window->window)) {
         sfRenderWindow_clear(window->window, sfBlack);
         if (analyse_event(window, event, menu->buttons, menu) == 0) {
             display_main_menu(window, menu);
