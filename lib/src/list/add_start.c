@@ -9,7 +9,7 @@
 
 control_t *add_start(control_t *list, char *name, char *value)
 {
-    list_t *elem = create_elem(name, value);
+    list_t *elem = create_elem_list(name, value);
 
     if (elem == NULL)
         return (NULL);

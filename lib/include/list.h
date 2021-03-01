@@ -31,7 +31,7 @@ typedef struct control_s {
     int ret;
 } control_t;
 
-list_t *create_elem(char *name, char *value);
+list_t *create_elem_list(char *name, char *value);
 control_t *add_start(control_t *list, char *name, char *value);
 control_t *add_end(control_t *list, char *name, char *value);
 void print_list(list_t *list);

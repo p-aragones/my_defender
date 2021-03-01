@@ -12,6 +12,7 @@ int play_click(window_t *window, menu_t *menu, button_t *button)
     (void)window;
     (void)menu;
     sfSprite_setTexture(button->elem->sprite, button->click_texture, sfTrue);
+    game(window);
     return (0);
 }
 
