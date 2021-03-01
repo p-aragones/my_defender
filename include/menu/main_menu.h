@@ -33,6 +33,9 @@ int play_click(window_t *window, menu_t *, button_t *button);
 int exit_hover(button_t *button);
 int exit_click(window_t *window, menu_t *, button_t *button);
 
+int sound_hover(button_t *button);
+int sound_click(window_t *window, menu_t *menu, button_t *button);
+
 void free_main_menu(menu_t *menu);
 
 #endif

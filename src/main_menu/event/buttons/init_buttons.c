@@ -22,7 +22,10 @@ sfIntRect rect, sfVector2i size)
     if (!button)
         return (NULL);
     button->elem = create_elem(path, pos, rect);
-    sfSprite_setScale(button->elem->sprite, SCALE_BTN);
+    if (rect.height == 109)
+        sfSprite_setScale(button->elem->sprite, SCALE_SMALL_BTN);
+    else
+        sfSprite_setScale(button->elem->sprite, SCALE_BTN);
     button->size = size;
     if (!button->elem)
         return (NULL);
@@ -51,8 +54,12 @@ button_t **init_buttons(window_t *window)
     buttons[1] = init_button_elem(EXIT_INFO);
     buttons[1] = init_button_fonc(buttons[1], EXIT_FONC_H, EXIT_FONC_C);
     buttons[1] = init_button_texture(buttons[1], EXIT_HOVER, EXIT_CLICK);
-    buttons[2] = NULL;
-    if (!buttons[0] || !buttons[1])
+    buttons[2] = init_button_elem(SOUND_INFO);
+    buttons[2] = init_button_fonc(buttons[2], SOUND_FONC_H, SOUND_FONC_C);
+    buttons[2] = init_button_texture(buttons[2],
+    SOUND_ON_HOVER, SOUND_ON_CLICK);
+    buttons[3] = NULL;
+    if (!buttons[0] || !buttons[1] || !buttons[2])
         return (NULL);
     return (buttons);
 }
