@@ -9,10 +9,11 @@
 
 int play_click(window_t *window, menu_t *menu, button_t *button)
 {
-    (void)window;
-    (void)menu;
     sfSprite_setTexture(button->elem->sprite, button->click_texture, sfTrue);
-    button->status = CLICK;
+    display_main_menu(window, menu);
+    sfRenderWindow_display(window->window);
+    if (waiting_play() == 84)
+        return (84);
     game(window);
     return (0);
 }
