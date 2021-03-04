@@ -38,6 +38,5 @@ int sound_click(window_t *window, menu_t *menu, button_t *button);
 void free_main_menu(menu_t *menu);
 
 int game(window_t *);
-int waiting_play(void);
 
 #endif

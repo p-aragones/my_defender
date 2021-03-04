@@ -7,7 +7,7 @@
 
 #include "main_menu.h"
 
-int waiting_play(void)
+int waiting_button(void)
 {
     clock_struct_t *clock = init_clock();
 

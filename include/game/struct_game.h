@@ -23,6 +23,7 @@ typedef struct enemy_s {
     elem_t elem;
     int damage;
     int health;
+    int speed;
 } enemy_t;
 
 typedef struct game_s {

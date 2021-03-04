@@ -13,13 +13,11 @@ int twr_one_click(window_t *window, game_t *game, button_game_t *button)
     (void)window;
     (void)game;
     (void)button;
-    my_putstr("twr_one_click\n");
     return (1);
 }
 
 int twr_one_hover(button_game_t *button)
 {
     (void)button;
-    my_putstr("twr_one_hover\n");
     return (0);
 }
