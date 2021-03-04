@@ -14,8 +14,13 @@ void change_texture(window_t *window, button_t **buttons)
     int x = 0;
 
     while (buttons[x]) {
-        if (mouse_hover(window->window, buttons[x]) == 1)
+        if (mouse_hover(window->window, buttons[x]) == 1 &&
+        buttons[x]->status != CLICK) {
             buttons[x]->hover_fonc(buttons[x]);
+        }
+        else if (buttons[x]->status == CLICK)
+            sfSprite_setTexture(buttons[x]->elem->sprite,
+            buttons[x]->click_texture, sfTrue);
         else
             sfSprite_setTexture(buttons[x]->elem->sprite,
             buttons[x]->elem->texture, sfTrue);

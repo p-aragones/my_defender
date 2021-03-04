@@ -11,12 +11,14 @@ int sound_click(window_t *window, menu_t *menu, button_t *button)
 {
     (void)menu;
     (void)window;
-    sfSprite_setTexture(button->elem->sprite, button->click_texture, sfTrue);
-    return (0);
-}
-
-int sound_hover(button_t *button)
-{
-    sfSprite_setTexture(button->elem->sprite, button->hover_texture, sfTrue);
+    if (button->status != CLICK) {
+        button->status = CLICK;
+        sfSprite_setTexture(button->elem->sprite,
+        button->click_texture, sfTrue);
+    } else {
+        button->status = NONE;
+        sfSprite_setTexture(button->elem->sprite,
+        button->elem->texture, sfTrue);
+    }
     return (0);
 }

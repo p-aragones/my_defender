@@ -25,6 +25,8 @@ int analyse_event(window_t *, sfEvent, button_t **, menu_t *);
 menu_t *init_main_menu(window_t *window);
 button_t **init_buttons(window_t *window);
 
+void hover(button_t *button);
+
 int display_main_menu(window_t *window, menu_t *menu);
 
 int play_hover(button_t *button);

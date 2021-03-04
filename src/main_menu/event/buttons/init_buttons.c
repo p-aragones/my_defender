@@ -7,9 +7,9 @@
 
 #include "main_menu.h"
 
-button_t *init_button_fonc(button_t *button, FONC_HOVER, FONC_CLICK)
+button_t *init_button_fonc(button_t *button, FONC_CLICK)
 {
-    button->hover_fonc = hover_fonc;
+    button->hover_fonc = &hover;
     button->click_fonc = click_fonc;
     return (button);
 }
@@ -21,6 +21,7 @@ sfIntRect rect, sfVector2i size)
 
     if (!button)
         return (NULL);
+    button->status = NONE;
     button->elem = create_elem(path, pos, rect);
     if (rect.height == 109)
         sfSprite_setScale(button->elem->sprite, SCALE_SMALL_BTN);
@@ -49,13 +50,13 @@ button_t **init_buttons(window_t *window)
         return (NULL);
     (void)window;
     buttons[0] = init_button_elem(PLAY_INFO);
-    buttons[0] = init_button_fonc(buttons[0], PLAY_FONC_H, PLAY_FONC_C);
+    buttons[0] = init_button_fonc(buttons[0], PLAY_FONC_C);
     buttons[0] = init_button_texture(buttons[0], PLAY_HOVER, PLAY_CLICK);
     buttons[1] = init_button_elem(EXIT_INFO);
-    buttons[1] = init_button_fonc(buttons[1], EXIT_FONC_H, EXIT_FONC_C);
+    buttons[1] = init_button_fonc(buttons[1], EXIT_FONC_C);
     buttons[1] = init_button_texture(buttons[1], EXIT_HOVER, EXIT_CLICK);
     buttons[2] = init_button_elem(SOUND_INFO);
-    buttons[2] = init_button_fonc(buttons[2], SOUND_FONC_H, SOUND_FONC_C);
+    buttons[2] = init_button_fonc(buttons[2], SOUND_FONC_C);
     buttons[2] = init_button_texture(buttons[2],
     SOUND_ON_HOVER, SOUND_ON_CLICK);
     buttons[3] = NULL;

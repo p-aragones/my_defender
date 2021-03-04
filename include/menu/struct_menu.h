@@ -11,18 +11,25 @@
 #include "struct.h"
 #include "csfml_lib.h"
 
+typedef enum {
+    CLICK,
+    HOVER,
+    NONE
+} status_t;
+
 typedef struct menu_s {
     elem_t *elem;
     struct button_s **buttons;
 } menu_t;
 
 typedef struct button_s {
-    int (*hover_fonc)(struct button_s *button);
+    void (*hover_fonc)(struct button_s *button);
     int (*click_fonc)(window_t *, menu_t *, struct button_s *button);
     sfVector2i size;
     elem_t *elem;
     sfTexture *hover_texture;
     sfTexture *click_texture;
+    status_t status;
 } button_t;
 
 #endif
