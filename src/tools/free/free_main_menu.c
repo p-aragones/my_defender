@@ -12,4 +12,6 @@ void free_main_menu(menu_t *menu)
 {
     free_elem(menu->elem);
     free_buttons(menu->buttons);
+    sfMusic_stop(menu->music);
+    sfMusic_destroy(menu->music);
 }

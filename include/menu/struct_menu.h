@@ -20,6 +20,7 @@ typedef enum {
 typedef struct menu_s {
     elem_t *elem;
     struct button_s **buttons;
+    sfMusic *music;
 } menu_t;
 
 typedef struct button_s {

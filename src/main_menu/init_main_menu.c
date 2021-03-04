@@ -16,6 +16,9 @@ menu_t *init_main_menu(window_t *window)
     menu->buttons = init_buttons(window);
     menu->elem = create_elem(MENU_BACKGROUND, POS_BG, RECT_BG);
     sfSprite_setScale(menu->elem->sprite, SCALE_BG);
+    menu->music = sfMusic_createFromFile(MUSIC);
+    sfMusic_play(menu->music);
+    sfMusic_setLoop(menu->music, sfTrue);
     if (!menu->buttons || !menu->elem)
         return (NULL);
     return (menu);

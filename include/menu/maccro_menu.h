@@ -64,4 +64,6 @@ sound_on_hover.png"
 #define RECT_BG (sfIntRect){0, 0, 1000, 563}
 #define SCALE_BG (sfVector2f){1.92, 1.92}
 
+#define MUSIC "resources/sound/music.wav"
+
 #endif

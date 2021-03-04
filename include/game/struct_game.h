@@ -12,6 +12,19 @@
 #include "struct_menu.h"
 #include "csfml_lib.h"
 
+typedef struct tower_s {
+    elem_t elem;
+    int type;
+    int power;
+    int speed;
+} tower_t;
+
+typedef struct enemy_s {
+    elem_t elem;
+    int damage;
+    int health;
+} enemy_t;
+
 typedef struct game_s {
     elem_t *elem;
     struct button_game_s **buttons;
