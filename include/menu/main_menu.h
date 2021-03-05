@@ -26,6 +26,7 @@ menu_t *init_main_menu(window_t *window);
 button_t **init_buttons(window_t *window);
 
 void hover(button_t *button);
+int click(window_t *window, menu_t *menu, button_t *button);
 
 int display_main_menu(window_t *window, menu_t *menu);
 
@@ -34,6 +35,8 @@ int play_click(window_t *window, menu_t *, button_t *button);
 int exit_click(window_t *window, menu_t *, button_t *button);
 
 int sound_click(window_t *window, menu_t *menu, button_t *button);
+
+int fps_click(window_t *window, menu_t *menu, struct button_s *button);
 
 void free_main_menu(menu_t *menu);
 

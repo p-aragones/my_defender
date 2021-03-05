@@ -42,6 +42,18 @@ button_t *init_button_texture(button_t * button, char *hover, char *click)
     return (button);
 }
 
+int check_button(button_t **buttons)
+{
+    int x = 0;
+
+    while (buttons[x]) {
+        if (!buttons[x])
+            return (84);
+        x++;
+    }
+    return (0);
+}
+
 button_t **init_buttons(window_t *window)
 {
     button_t **buttons = malloc(sizeof(button_t *) * N_BUTTONS);
@@ -59,8 +71,11 @@ button_t **init_buttons(window_t *window)
     buttons[2] = init_button_fonc(buttons[2], SOUND_FONC_C);
     buttons[2] = init_button_texture(buttons[2],
     SOUND_ON_HOVER, SOUND_ON_CLICK);
-    buttons[3] = NULL;
-    if (!buttons[0] || !buttons[1] || !buttons[2])
+    buttons[3] = init_button_elem(FPS_INFO);
+    buttons[3] = init_button_fonc(buttons[3], FPS_FONC_C);
+    buttons[3] = init_button_texture(buttons[3], FPS_HOVER, FPS_CLICK);
+    buttons[4] = NULL;
+    if (check_button(buttons) == 84)
         return (NULL);
     return (buttons);
 }

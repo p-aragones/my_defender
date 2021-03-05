@@ -49,15 +49,14 @@ sound_on_hover.png"
 #define SOUND_FONC_C sound_click
 #define SOUND_FONC_H sound_hover
 
-#define FPS_BTN "resources/sprites/buttons/empty_red.jpg"
-#define FPS_HOVER "resources/sprites/buttons/empty_blue.jpg"
-#define FPS_CLICK "resources/sprites/buttons/pressed/.png"
-#define POS_FPS (sfVector2f){X_WINDOW / 2 - 70, Y_WINDOW / 2 + 50}
+#define FPS_BTN "resources/sprites/buttons/empty_red.png"
+#define FPS_HOVER "resources/sprites/buttons/empty_blue.png"
+#define FPS_CLICK "resources/sprites/buttons/empty_grey.png"
+#define POS_FPS (sfVector2f){50, Y_WINDOW / 2 - 300}
 #define RECT_FPS (sfIntRect){0, 0, 49, 20}
-#define SIZE_QUIT (sfVector2i){49, 20}
+#define SIZE_FPS (sfVector2i){49, 20}
 #define FPS_INFO FPS_BTN, POS_FPS, RECT_FPS, SIZE_QUIT
 #define FPS_FONC_C fps_click
-#define FPS_FONC_H fps_hover
 
 #define MENU_BACKGROUND "resources/sprites/background/main_menu_background.png"
 #define POS_BG (sfVector2f){0, 0}
