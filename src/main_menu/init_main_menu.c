@@ -7,13 +7,13 @@
 
 #include "main_menu.h"
 
-menu_t *init_main_menu(window_t *window)
+menu_t *init_main_menu(void)
 {
     menu_t *menu = malloc(sizeof(menu_t));
 
     if (menu == NULL)
         return (NULL);
-    menu->buttons = init_buttons(window);
+    menu->buttons = init_buttons();
     menu->elem = create_elem(MENU_BACKGROUND, POS_BG, RECT_BG);
     sfSprite_setScale(menu->elem->sprite, SCALE_BG);
     menu->fps = 60;

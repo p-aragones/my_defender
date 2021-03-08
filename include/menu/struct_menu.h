@@ -17,6 +17,10 @@ typedef enum {
     NONE
 } status_t;
 
+typedef struct fps_s {
+    int fps;
+} fps_t;
+
 typedef struct menu_s {
     elem_t *elem;
     struct button_s **buttons;
