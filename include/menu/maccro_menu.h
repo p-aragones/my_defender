@@ -23,10 +23,9 @@ struct button_s *button)
 #define POS_PLAY (sfVector2f){X_WINDOW / 2 - 70, Y_WINDOW / 2 - 35}
 #define RECT_PLAY (sfIntRect){0, 0, 49, 20}
 #define SIZE_PLAY (sfVector2i){49, 20}
-#define PLAY_INFO PLAY_BTN, POS_PLAY, RECT_PLAY, SIZE_PLAY
 #define PLAY_FONC_C play_click
-#define PLAY_FONC_H play_hover
-
+#define PLAY_INFO PLAY_BTN, POS_PLAY, RECT_PLAY, SIZE_PLAY
+#define PLAY_TEXTURE PLAY_HOVER, PLAY_CLICK
 
 #define EXIT_BTN "resources/sprites/buttons/red/exit.png"
 #define EXIT_HOVER "resources/sprites/buttons/blue/exit.png"
@@ -34,9 +33,9 @@ struct button_s *button)
 #define POS_EXIT (sfVector2f){X_WINDOW / 2 - 70, Y_WINDOW / 2 + 50}
 #define RECT_EXIT (sfIntRect){0, 0, 49, 20}
 #define SIZE_QUIT (sfVector2i){49, 20}
-#define EXIT_INFO EXIT_BTN, POS_EXIT, RECT_EXIT, SIZE_QUIT
 #define EXIT_FONC_C exit_click
-#define EXIT_FONC_H exit_hover
+#define EXIT_INFO EXIT_BTN, POS_EXIT, RECT_EXIT, SIZE_QUIT
+#define EXIT_TEXTURE EXIT_HOVER, EXIT_CLICK
 
 #define SOUND_ON_BTN "resources/sprites/buttons/red_small/sound_on.png"
 #define SOUND_ON_HOVER "resources/sprites/buttons/blue_small/\
@@ -45,9 +44,9 @@ sound_on_hover.png"
 #define POS_SOUND (sfVector2f){50, Y_WINDOW / 2 - 200}
 #define RECT_SOUND (sfIntRect){0, 0, 109, 109}
 #define SIZE_SOUND (sfVector2i){109, 109}
-#define SOUND_INFO SOUND_ON_BTN, POS_SOUND, RECT_SOUND, SIZE_SOUND
 #define SOUND_FONC_C sound_click
-#define SOUND_FONC_H sound_hover
+#define SOUND_INFO SOUND_ON_BTN, POS_SOUND, RECT_SOUND, SIZE_SOUND
+#define SOUND_TEXTURE SOUND_ON_HOVER, SOUND_ON_CLICK
 
 #define FPS_BTN "resources/sprites/buttons/empty_red.png"
 #define FPS_HOVER "resources/sprites/buttons/empty_blue.png"
@@ -55,8 +54,9 @@ sound_on_hover.png"
 #define POS_FPS (sfVector2f){50, Y_WINDOW / 2 - 300}
 #define RECT_FPS (sfIntRect){0, 0, 49, 20}
 #define SIZE_FPS (sfVector2i){49, 20}
-#define FPS_INFO FPS_BTN, POS_FPS, RECT_FPS, SIZE_QUIT
 #define FPS_FONC_C fps_click
+#define FPS_INFO FPS_BTN, POS_FPS, RECT_FPS, SIZE_QUIT
+#define FPS_TEXTURE FPS_HOVER, FPS_CLICK
 
 #define MENU_BACKGROUND "resources/sprites/background/main_menu_background.png"
 #define POS_BG (sfVector2f){0, 0}
@@ -64,5 +64,8 @@ sound_on_hover.png"
 #define SCALE_BG (sfVector2f){1.92, 1.92}
 
 #define MUSIC "resources/sound/music.wav"
+
+#define POS_FPS_TEXT (sfVector2f){60, Y_WINDOW / 2 - 354}
+#define FONT_SIZE_FPS 95
 
 #endif

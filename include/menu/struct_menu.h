@@ -17,11 +17,17 @@ typedef enum {
     NONE
 } status_t;
 
+typedef struct fps_s {
+    int fps;
+    sfFont *font;
+    sfText *text;
+} fps_t;
+
 typedef struct menu_s {
     elem_t *elem;
     struct button_s **buttons;
     sfMusic *music;
-    int fps;
+    fps_t *fps;
 } menu_t;
 
 typedef struct button_s {

@@ -16,5 +16,6 @@ int display_main_menu(window_t *window, menu_t *menu)
         display(window->window, menu->buttons[x]->elem);
         x++;
     }
+    sfRenderWindow_drawText(window->window, menu->fps->text, NULL);
     return (0);
 }
