@@ -15,6 +15,7 @@
 #include <unistd.h>
 #include <stdio.h>
 
+#include "lib.h"
 #include "csfml_lib.h"
 #include "defender.h"
 #include "struct_menu.h"
@@ -22,10 +23,12 @@
 
 int analyse_event(window_t *, sfEvent, button_t **, menu_t *);
 
-menu_t *init_main_menu(window_t *window);
-button_t **init_buttons(window_t *window);
+menu_t *init_main_menu(void);
+button_t **init_buttons(void);
+fps_t *init_fps(void);
 
 void hover(button_t *button);
+int click(window_t *window, menu_t *menu, button_t *button);
 
 int display_main_menu(window_t *window, menu_t *menu);
 
@@ -34,6 +37,8 @@ int play_click(window_t *window, menu_t *, button_t *button);
 int exit_click(window_t *window, menu_t *, button_t *button);
 
 int sound_click(window_t *window, menu_t *menu, button_t *button);
+
+int fps_click(window_t *window, menu_t *menu, struct button_s *button);
 
 void free_main_menu(menu_t *menu);
 
