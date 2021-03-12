@@ -10,7 +10,7 @@
 int main_menu(window_t *window)
 {
     sfEvent event;
-    menu_t *menu = init_main_menu(window);
+    menu_t *menu = init_main_menu();
     clock_struct_t *clock = init_clock();
 
     if (!menu || !clock)
