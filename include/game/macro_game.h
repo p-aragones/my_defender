@@ -42,6 +42,7 @@ struct button_game_s *button)
 #define TWR_TWO_FONC_H twr_two_hover
 
 #define SNAKE "resources/sprites/snake/Snake_walk.png"
-#define SNAKE_RECT (sfIntRect){0, 0, 50, 50}
+#define SNAKE_RECT (sfIntRect){0, 0, 48, 48}
+#define SNAKE_POS (sfVector2f){0, 0}
 
 #endif /* !MACRO_GAME_H_ */

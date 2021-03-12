@@ -15,6 +15,17 @@ wave_t *init_enemies(wave_t *waves)
     if (!waves->enemies)
         return (NULL);
     while (enemy < waves->n_enemies) {
-        waves->enemies[enemy]->elem = create_elem();
+        waves->enemies[enemy] = malloc(sizeof(enemy_t));
+        if (waves->enemies[enemy] == NULL)
+            return (NULL);
+        waves->enemies[enemy]->elem = create_elem(SNAKE,
+        SNAKE_POS, SNAKE_RECT);
+        waves->enemies[enemy]->damage = 2;
+        waves->enemies[enemy]->health = 10;
+        waves->enemies[enemy]->speed = 4;
+        waves->enemies[enemy]->pos = SNAKE_POS;
+        enemy++;
     }
+    waves->enemies[enemy] = NULL;
+    return (waves);
 }

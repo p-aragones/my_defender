@@ -16,5 +16,6 @@ int display_game(window_t *window, game_t *game)
         display(window->window, game->buttons[x]->elem);
         x++;
     }
+    draw_enemies(game->waves[0], window->window);
     return (0);
 }

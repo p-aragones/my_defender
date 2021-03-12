@@ -25,7 +25,11 @@ int analyse_event(window_t *, sfEvent, button_game_t **, game_t *);
 game_t *init_game(window_t *window);
 button_game_t **init_buttons_game(window_t *window);
 
+wave_t *init_enemies(wave_t *);
+wave_t **init_waves(wave_t **);
+
 int display_game(window_t *window, game_t *menu);
+void draw_enemies(wave_t *, sfRenderWindow *);
 
 int twr_one_click(window_t *window, game_t *game, button_game_t *button);
 int twr_one_hover(button_game_t *button);

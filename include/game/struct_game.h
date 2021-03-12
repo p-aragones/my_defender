@@ -24,6 +24,7 @@ typedef struct enemy_s {
     int damage;
     int health;
     int speed;
+    sfVector2f pos;
 } enemy_t;
 
 typedef struct wave_s {
