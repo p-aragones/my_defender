@@ -19,17 +19,22 @@ int check_towers(tower_t **towers)
     return (1);
 }
 
-tower_t *init_tower(char *path, sfVector2f pos, sfIntRect rect)
+tower_t *init_tower_elem(char *path, sfVector2f pos, sfIntRect rect)
 {
     tower_t *tower = malloc(sizeof(tower_t));
 
     if (!tower)
         return (NULL);
     tower->elem = create_elem(path, pos, rect);
-    tower->power = 10;
-    tower->speed = 10;
     sfSprite_setScale(tower->elem->sprite, SCALE_TOWER);
     return (tower);
+}
+
+void init_tower_info(tower_t *tower, int power, int speed, int price)
+{
+    tower->power = power;
+    tower->speed = speed;
+    tower->price = price;
 }
 
 tower_t **init_towers(void)
@@ -38,10 +43,14 @@ tower_t **init_towers(void)
 
     if (!towers)
         return (NULL);
-    towers[0] = init_tower(PATH_TOWER_ONE, POS_TOWER_1, RECT_TOWER_1);
-    towers[1] = init_tower(PATH_TOWER_TWO, POS_TOWER_2, RECT_TOWER_2);
-    towers[2] = init_tower(PATH_TOWER_THREE, POS_TOWER_3, RECT_TOWER_3);
-    towers[3] = init_tower(PATH_TOWER_FOUR, POS_TOWER_4, RECT_TOWER_4);
+    towers[0] = init_tower_elem(TOWER_1_ELEM);
+    init_tower_info(towers[0], TOWER_1_INFO);
+    towers[1] = init_tower_elem(TOWER_2_ELEM);
+    init_tower_info(towers[1], TOWER_2_INFO);
+    towers[2] = init_tower_elem(TOWER_3_ELEM);
+    init_tower_info(towers[2], TOWER_3_INFO);
+    towers[3] = init_tower_elem(TOWER_4_ELEM);
+    init_tower_info(towers[3], TOWER_4_INFO);
     towers[4] = NULL;
     if (!check_towers(towers))
         return (NULL);

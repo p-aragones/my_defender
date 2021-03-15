@@ -14,6 +14,7 @@ game_t *init_game(window_t *window)
     (void)window;
     if (game == NULL)
         return (NULL);
+    game->money = 20;
     game->buttons = init_buttons_game(window);
     game->towers = init_towers();
     game->elem = create_elem(GAME_BG, POS_BG, RECT_BG);

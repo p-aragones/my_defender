@@ -12,11 +12,17 @@
 #include "struct_menu.h"
 #include "csfml_lib.h"
 
+typedef enum {
+    SELECTED,
+    NOT_SELECT
+} select_status_t;
+
 typedef struct tower_s {
     elem_t *elem;
     int type;
     int power;
     int speed;
+    int price;
 } tower_t;
 
 typedef struct enemy_s {
@@ -36,6 +42,7 @@ typedef struct wave_s {
 typedef struct game_s {
     elem_t *elem;
     struct button_game_s **buttons;
+    int money;
     tower_t **towers;
     wave_t **waves;
 } game_t;
