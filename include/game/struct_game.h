@@ -20,15 +20,24 @@ typedef struct tower_s {
 } tower_t;
 
 typedef struct enemy_s {
-    elem_t elem;
+    elem_t *elem;
     int damage;
     int health;
     int speed;
+    sfVector2f pos;
 } enemy_t;
+
+typedef struct wave_s {
+    int wave;
+    int n_enemies;
+    enemy_t **enemies;
+} wave_t;
 
 typedef struct game_s {
     elem_t *elem;
     struct button_game_s **buttons;
+    tower_t **towers;
+    wave_t **waves;
 } game_t;
 
 typedef struct button_game_s {

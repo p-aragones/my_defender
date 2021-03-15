@@ -15,8 +15,9 @@ game_t *init_game(window_t *window)
         return (NULL);
     game->buttons = init_buttons_game(window);
     game->elem = create_elem(GAME_BG, POS_BG, RECT_BG);
+    game->waves = init_waves(game->waves);
     sfSprite_setScale(game->elem->sprite, SCALE_BG);
-    if (!game->buttons || !game->elem)
+    if (!game->buttons || !game->elem || !game->waves)
         return (NULL);
     return (game);
 }
