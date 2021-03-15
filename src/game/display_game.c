@@ -11,11 +11,17 @@ int display_game(window_t *window, game_t *game, clock_struct_t *clock)
 {
     int x = 0;
 
+    (void)clock;
     display(window->window, game->elem);
     while (game->buttons[x]) {
         display(window->window, game->buttons[x]->elem);
         x++;
     }
-    draw_enemies(game->waves[0], window->window, clock);
+    x = 0;
+    while (game->towers[x]) {
+        display(window->window, game->towers[x]->elem);
+        x++;
+    }
+    //draw_enemies(game->waves[0], window->window, clock);
     return (0);
 }

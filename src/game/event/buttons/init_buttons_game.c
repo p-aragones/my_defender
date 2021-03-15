@@ -35,6 +35,7 @@ char *hover, char *click)
 {
     button->hover_texture = sfTexture_createFromFile(hover, NULL);
     button->click_texture = sfTexture_createFromFile(click, NULL);
+    button->status = NONE;
     if (!button->hover_texture || !button->click_texture)
         return (NULL);
     return (button);

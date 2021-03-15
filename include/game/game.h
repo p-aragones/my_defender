@@ -19,6 +19,7 @@
 #include "defender.h"
 #include "struct_game.h"
 #include "macro_game.h"
+#include "maccro_towers.h"
 
 int analyse_event(window_t *, sfEvent, button_game_t **, game_t *);
 
@@ -27,6 +28,7 @@ button_game_t **init_buttons_game(window_t *window);
 
 wave_t *init_enemies(wave_t *);
 wave_t **init_waves(wave_t **);
+tower_t **init_towers(void);
 
 int display_game(window_t *window, game_t *menu, clock_struct_t *);
 void draw_enemies(wave_t *, sfRenderWindow *, clock_struct_t *);

@@ -13,7 +13,7 @@
 #include "csfml_lib.h"
 
 typedef struct tower_s {
-    elem_t elem;
+    elem_t *elem;
     int type;
     int power;
     int speed;
@@ -47,6 +47,7 @@ typedef struct button_game_s {
     elem_t *elem;
     sfTexture *hover_texture;
     sfTexture *click_texture;
+    status_t status;
 } button_game_t;
 
 #endif

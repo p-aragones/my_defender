@@ -16,7 +16,7 @@ int game(window_t *window)
 
     if (!game || !clock)
         return (84);
-    while (1) {
+    while (sfRenderWindow_isOpen(window->window)) {
         sfRenderWindow_clear(window->window, sfBlack);
         if (analyse_event(window, event, game->buttons, game) == 0) {
             display_game(window, game, clock);

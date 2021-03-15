@@ -17,7 +17,7 @@
 int get_y_mouse(sfRenderWindow *window);
 int get_x_mouse(sfRenderWindow *window);
 
-int mouse_hover(sfRenderWindow *window, button_t *button);
+int mouse_hover(sfRenderWindow *window, sfVector2f);
 
 void display(sfRenderWindow *window, elem_t *elem);
 
