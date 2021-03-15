@@ -7,7 +7,7 @@
 
 #include "game.h"
 
-int display_game(window_t *window, game_t *game)
+int display_game(window_t *window, game_t *game, clock_struct_t *clock)
 {
     int x = 0;
 
@@ -16,6 +16,6 @@ int display_game(window_t *window, game_t *game)
         display(window->window, game->buttons[x]->elem);
         x++;
     }
-    draw_enemies(game->waves[0], window->window);
+    draw_enemies(game->waves[0], window->window, clock);
     return (0);
 }
