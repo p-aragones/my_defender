@@ -6,6 +6,7 @@
 */
 
 #include "game.h"
+#include "printf.h"
 
 int game(window_t *window)
 {
@@ -19,7 +20,6 @@ int game(window_t *window)
         sfRenderWindow_clear(window->window, sfBlack);
         if (analyse_event(window, event, game->buttons, game) == 0) {
             display_game(window, game, clock);
-            clock_loop(clock);
             sfRenderWindow_display(window->window);
         }
         else

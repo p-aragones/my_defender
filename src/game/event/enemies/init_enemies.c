@@ -20,6 +20,9 @@ wave_t *init_enemies(wave_t *waves)
             return (NULL);
         waves->enemies[enemy]->elem = create_elem(SNAKE,
         SNAKE_POS, SNAKE_RECT);
+        waves->enemies[enemy]->elem->pos.x -= enemy * 2;
+        sfSprite_setPosition(waves->enemies[enemy]->elem->sprite,
+        waves->enemies[enemy]->elem->pos);
         waves->enemies[enemy]->damage = 2;
         waves->enemies[enemy]->health = 10;
         waves->enemies[enemy]->speed = 4;

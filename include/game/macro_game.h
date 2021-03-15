@@ -43,6 +43,6 @@ struct button_game_s *button)
 
 #define SNAKE "resources/sprites/snake/Snake_walk.png"
 #define SNAKE_RECT (sfIntRect){0, 0, 48, 48}
-#define SNAKE_POS (sfVector2f){0, 0}
+#define SNAKE_POS (sfVector2f){2000, 0}
 
 #endif /* !MACRO_GAME_H_ */
