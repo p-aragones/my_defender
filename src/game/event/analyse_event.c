@@ -38,7 +38,7 @@ void check_enemies_pos(game_t *game, int wave)
 
 int analyse_event_game(window_t *window, sfEvent event, game_t *game)
 {
-    check_enemies_pos(game, 0);
+    check_enemies_pos(game, 9);
     while (sfRenderWindow_pollEvent(window->window, &event)) {
         if (event.type == sfEvtClosed)
             sfRenderWindow_close(window->window);
