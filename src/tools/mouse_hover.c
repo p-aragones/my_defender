@@ -7,7 +7,7 @@
 
 #include "tools.h"
 
-int mouse_hover(sfRenderWindow *window, button_t *button)
+int mouse_hover(sfRenderWindow *window, sfVector2f pos)
 {
     int mouse_x = get_x_mouse(window);
     int mouse_y = get_y_mouse(window);
@@ -16,9 +16,9 @@ int mouse_hover(sfRenderWindow *window, button_t *button)
 
     size.x = size.x * scale.x;
     size.y = size.y * scale.y;
-    if (mouse_x >= button->elem->pos.x && mouse_x <=
-    button->elem->pos.x + size.x && mouse_y >= button->elem->pos.y
-    && mouse_y <= button->elem->pos.y + size.y)
+    if (mouse_x >= pos.x && mouse_x <=
+    pos.x + size.x && mouse_y >= pos.y
+    && mouse_y <= pos.y + size.y)
         return (1);
     return (0);
 }

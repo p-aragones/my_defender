@@ -35,6 +35,7 @@ char *hover, char *click)
 {
     button->hover_texture = sfTexture_createFromFile(hover, NULL);
     button->click_texture = sfTexture_createFromFile(click, NULL);
+    button->status = NONE;
     if (!button->hover_texture || !button->click_texture)
         return (NULL);
     return (button);
@@ -48,10 +49,8 @@ button_game_t **init_buttons_game(window_t *window)
         return (NULL);
     (void)window;
     btns[0] = init_button_elem_g(TWR_ONE_INFO);
-    btns[0] = init_button_fonc_g(btns[0], TWR_ONE_FONC_H, TWR_ONE_FONC_C);
     btns[0] = init_button_texture_g(btns[0], TWR_ONE_HOVER, TWR_ONE_CLICK);
     btns[1] = init_button_elem_g(EXIT_INFO);
-    btns[1] = init_button_fonc_g(btns[1], TWR_TWO_FONC_H, TWR_TWO_FONC_C);
     btns[1] = init_button_texture_g(btns[1], EXIT_HOVER, EXIT_CLICK);
     btns[2] = NULL;
     if (!btns[0] || !btns[1])

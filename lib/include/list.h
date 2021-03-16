@@ -16,8 +16,7 @@
 
 typedef struct list_s
 {
-    char *name;
-    char *value;
+    struct tower_s *tower;
     struct list_s *next;
     struct list_s *prev;
 } list_t;
@@ -26,14 +25,11 @@ typedef struct control_s {
     list_t *first;
     list_t *last;
     int size;
-    char **path;
-    bool run;
-    int ret;
 } control_t;
 
-list_t *create_elem_list(char *name, char *value);
-control_t *add_start(control_t *list, char *name, char *value);
-control_t *add_end(control_t *list, char *name, char *value);
+list_t *create_elem_list(struct tower_s *tower);
+control_t *add_start(control_t *list, struct tower_s *tower);
+control_t *add_end(control_t *list, struct tower_s *tower);
 void print_list(list_t *list);
 void free_list(control_t *control);
 int len_list(list_t *list);

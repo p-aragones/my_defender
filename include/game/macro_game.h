@@ -9,6 +9,7 @@
 #define MACRO_GAME_H_
 
 #define N_BUTTONS 7
+#define N_WAVES 10
 
 #define FONC_HOVER_GAME int (*hover_fonc_g)(struct button_game_s *button)
 #define FONC_CLICK_GAME int (*click_fonc_g)(window_t *, game_t *, \
@@ -30,7 +31,6 @@ struct button_game_s *button)
 #define TWR_ONE_FONC_C twr_one_click
 #define TWR_ONE_FONC_H twr_one_hover
 
-
 #define TWR_TWO_BTN "resources/sprites/buttons/red/exit.png"
 #define TWR_TWO_HOVER "resources/sprites/buttons/blue/exit.png"
 #define TWR_TWO_CLICK "resources/sprites/buttons/pressed/exit.png"
@@ -40,5 +40,15 @@ struct button_game_s *button)
 #define TWR_TWO_INFO TWR_TWO_BTN, POS_TWR_TWO, RECT_TWR_TWO, SIZE_QUIT
 #define TWR_TWO_FONC_C twr_two_click
 #define TWR_TWO_FONC_H twr_two_hover
+
+#define SNAKE "resources/sprites/snake/Snake_walk.png"
+#define SNAKE_RECT (sfIntRect){0, 0, 48, 48}
+#define SNAKE_POS (sfVector2f){2000, 650}
+
+#define POS_HEALTH_TEXT (sfVector2f){X_WINDOW / 2 - 35, 50}
+#define FONT_SIZE_HEALTH 95
+
+#define POS_MONEY_TEXT (sfVector2f){X_WINDOW / 2 - 35, 125}
+#define FONT_SIZE_MONEY 95
 
 #endif /* !MACRO_GAME_H_ */

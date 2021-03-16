@@ -7,14 +7,24 @@
 
 #include "game.h"
 
-int display_game(window_t *window, game_t *game)
+int display_game(window_t *window, game_t *game, clock_struct_t *clock,
+int wave)
 {
     int x = 0;
 
+    (void)clock;
     display(window->window, game->elem);
     while (game->buttons[x]) {
         display(window->window, game->buttons[x]->elem);
         x++;
     }
+    x = 0;
+    while (game->towers_buttons[x]) {
+        display(window->window, game->towers_buttons[x]->elem);
+        x++;
+    }
+    sfRenderWindow_drawText(window->window, game->health->text, NULL);
+    sfRenderWindow_drawText(window->window, game->money->text, NULL);
+    draw_enemies(game->waves[wave], window->window, clock);
     return (0);
 }
