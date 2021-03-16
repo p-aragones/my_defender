@@ -6,7 +6,6 @@
 */
 
 #include "game.h"
-#include "printf.h"
 
 int game(window_t *window)
 {

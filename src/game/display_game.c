@@ -23,6 +23,6 @@ int display_game(window_t *window, game_t *game, clock_struct_t *clock)
         x++;
     }
     sfRenderWindow_drawText(window->window, game->health->text, NULL);
-    //draw_enemies(game->waves[0], window->window, clock);
+    draw_enemies(game->waves[0], window->window, clock);
     return (0);
 }

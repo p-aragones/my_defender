@@ -6,7 +6,6 @@
 */
 
 #include "game.h"
-#include "lib.h"
 
 void draw_enemies(wave_t *wave, sfRenderWindow *window, clock_struct_t *clock)
 {
