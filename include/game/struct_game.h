@@ -36,6 +36,7 @@ typedef struct enemy_s {
 typedef struct wave_s {
     int wave;
     int n_enemies;
+    int enemies_left;
     enemy_t **enemies;
 } wave_t;
 
