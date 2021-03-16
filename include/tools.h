@@ -26,4 +26,6 @@ void free_buttons(button_t **buttons);
 
 int waiting_button(void);
 
+char *my_its(int);
+
 #endif

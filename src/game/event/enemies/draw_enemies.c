@@ -6,6 +6,7 @@
 */
 
 #include "game.h"
+#include "lib.h"
 
 void draw_enemies(wave_t *wave, sfRenderWindow *window, clock_struct_t *clock)
 {
@@ -17,7 +18,7 @@ void draw_enemies(wave_t *wave, sfRenderWindow *window, clock_struct_t *clock)
         move_rect(&wave->enemies[0]->elem->rect, 48, 192);
         sfClock_restart(clock->clock);
     }
-    while (wave->enemies[i]) {
+    while (i < wave->n_enemies) {
         sfSprite_setTextureRect(wave->enemies[i]->elem->sprite,
         wave->enemies[0]->elem->rect);
         sfRenderWindow_drawSprite(window, wave->enemies[i]->elem->sprite,

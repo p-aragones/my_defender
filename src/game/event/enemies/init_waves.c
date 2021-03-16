@@ -6,6 +6,7 @@
 */
 
 #include "game.h"
+#include "lib.h"
 
 wave_t **init_waves(wave_t **waves)
 {
@@ -24,6 +25,6 @@ wave_t **init_waves(wave_t **waves)
         waves[wave] = init_enemies(waves[wave]);
         wave++;
     }
-    waves[wave - 1] = NULL;
+    waves[wave] = NULL;
     return (waves);
 }

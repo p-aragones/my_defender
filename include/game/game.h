@@ -21,7 +21,7 @@
 #include "macro_game.h"
 #include "maccro_towers.h"
 
-int analyse_event(window_t *, sfEvent, button_game_t **, game_t *);
+int analyse_event_game(window_t *window, sfEvent event, game_t *game);
 
 game_t *init_game(window_t *window);
 button_game_t **init_buttons_game(window_t *window);

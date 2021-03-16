@@ -6,6 +6,7 @@
 */
 
 #include "game.h"
+#include "lib.h"
 
 wave_t *init_enemies(wave_t *waves)
 {
@@ -24,6 +25,7 @@ wave_t *init_enemies(wave_t *waves)
         waves->enemies[enemy]->health = 10;
         waves->enemies[enemy]->speed = 4;
         waves->enemies[enemy]->pos = SNAKE_POS;
+        waves->enemies[enemy]->pos.x += enemy * 2 + 48;
         enemy++;
     }
     waves->enemies[enemy] = NULL;

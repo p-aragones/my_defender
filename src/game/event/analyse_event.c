@@ -21,8 +21,24 @@ int launch_action(window_t *window, sfEvent event, game_t *game)
     return (-1);
 }
 
+void check_enemies_pos(game_t *game, int wave)
+{
+    int i = 0;
+
+    while (i < game->waves[wave]->n_enemies) {
+        if (game->waves[wave]->enemies[i]->elem->pos.x <= 400 &&
+        game->waves[wave]->enemies[i]->elem->pos.x > 0) {
+            game->waves[wave]->enemies[i]->elem->pos.x = -200;
+            game->health->health -= game->waves[wave]->enemies[i]->damage;
+            sfText_setString(game->health->text, my_its(game->health->health));
+        }
+        i++;
+    }
+}
+
 int analyse_event_game(window_t *window, sfEvent event, game_t *game)
 {
+    check_enemies_pos(game, 0);
     while (sfRenderWindow_pollEvent(window->window, &event)) {
         if (event.type == sfEvtClosed)
             sfRenderWindow_close(window->window);
