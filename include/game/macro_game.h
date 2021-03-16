@@ -43,6 +43,9 @@ struct button_game_s *button)
 
 #define SNAKE "resources/sprites/snake/Snake_walk.png"
 #define SNAKE_RECT (sfIntRect){0, 0, 48, 48}
-#define SNAKE_POS (sfVector2f){2000, 0}
+#define SNAKE_POS (sfVector2f){2000, 650}
+
+#define POS_HEALTH_TEXT (sfVector2f){X_WINDOW / 2 - 35, 50}
+#define FONT_SIZE_HEALTH 95
 
 #endif /* !MACRO_GAME_H_ */

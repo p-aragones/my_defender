@@ -40,4 +40,6 @@ int twr_one_hover(button_game_t *button);
 int twr_two_click(window_t *window, game_t *, button_game_t *button);
 int twr_two_hover(button_game_t *button);
 
+health_t *init_health(void);
+
 #endif
