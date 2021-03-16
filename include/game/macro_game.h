@@ -48,4 +48,7 @@ struct button_game_s *button)
 #define POS_HEALTH_TEXT (sfVector2f){X_WINDOW / 2 - 35, 50}
 #define FONT_SIZE_HEALTH 95
 
+#define POS_MONEY_TEXT (sfVector2f){X_WINDOW / 2 - 35, 125}
+#define FONT_SIZE_MONEY 95
+
 #endif /* !MACRO_GAME_H_ */

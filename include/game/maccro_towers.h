@@ -17,10 +17,10 @@
 #define PATH_TOWER_THREE "resources/sprites/twrs/3.png"
 #define PATH_TOWER_FOUR "resources/sprites/twrs/4.png"
 
-#define POS_TOWER_1 (sfVector2f){1500, 1080 - (43 * 2.2) - 55}
-#define POS_TOWER_2 (sfVector2f){1600, 1080 - (46 * 2.2) - 55}
-#define POS_TOWER_3 (sfVector2f){1700, 1080 - (46 * 2.2) - 55}
-#define POS_TOWER_4 (sfVector2f){1800, 1080 - (48 * 2.2) - 55}
+#define POS_TOWER_1 (sfVector2f){650, 1080 - (43 * 2.2) - 90}
+#define POS_TOWER_2 (sfVector2f){850, 1080 - (46 * 2.2) - 90}
+#define POS_TOWER_3 (sfVector2f){1050, 1080 - (46 * 2.2) - 90}
+#define POS_TOWER_4 (sfVector2f){1250, 1080 - (48 * 2.2) - 90}
 
 #define RECT_TOWER_1 (sfIntRect){0, 0, 23, 43}
 #define RECT_TOWER_2 (sfIntRect){0, 0, 24, 46}

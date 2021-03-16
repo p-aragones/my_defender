@@ -7,7 +7,8 @@
 
 #include "game.h"
 
-int display_game(window_t *window, game_t *game, clock_struct_t *clock)
+int display_game(window_t *window, game_t *game, clock_struct_t *clock,
+int wave)
 {
     int x = 0;
 
@@ -23,6 +24,7 @@ int display_game(window_t *window, game_t *game, clock_struct_t *clock)
         x++;
     }
     sfRenderWindow_drawText(window->window, game->health->text, NULL);
-    draw_enemies(game->waves[0], window->window, clock);
+    sfRenderWindow_drawText(window->window, game->money->text, NULL);
+    draw_enemies(game->waves[wave], window->window, clock);
     return (0);
 }

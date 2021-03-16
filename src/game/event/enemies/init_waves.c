@@ -22,6 +22,7 @@ wave_t **init_waves(wave_t **waves)
             return (NULL);
         waves[wave]->wave = wave + 1;
         waves[wave]->n_enemies = wave * 2 + 1;
+        waves[wave]->enemies_left = wave * 2 + 1;
         waves[wave] = init_enemies(waves[wave]);
         wave++;
     }

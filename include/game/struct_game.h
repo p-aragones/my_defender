@@ -37,6 +37,7 @@ typedef struct enemy_s {
 typedef struct wave_s {
     int wave;
     int n_enemies;
+    int enemies_left;
     enemy_t **enemies;
 } wave_t;
 
@@ -46,10 +47,16 @@ typedef struct health_s {
     sfText *text;
 } health_t;
 
+typedef struct money_s {
+    int money;
+    sfFont *font;
+    sfText *text;
+} money_t;
+
 typedef struct game_s {
     elem_t *elem;
     struct button_game_s **buttons;
-    int money;
+    money_t *money;
     health_t *health;
     tower_t **towers_buttons;
     struct control_s *towers;
