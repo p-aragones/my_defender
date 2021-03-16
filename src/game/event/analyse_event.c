@@ -48,5 +48,7 @@ int analyse_event_game(window_t *window, sfEvent event, game_t *game, int wave)
         if (launch_action(window, event, game) == 84)
             return (84);
     }
+    if (wave == N_WAVES || game->health->health <= 0)
+        return (1);
     return (0);
 }

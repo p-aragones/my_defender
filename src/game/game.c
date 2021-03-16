@@ -23,8 +23,6 @@ int game(window_t *window)
             sfRenderWindow_display(window->window);
             if (game->waves[wave]->enemies_left == 0)
                 wave++;
-            if (wave == N_WAVES || game->health->health <= 0)
-                return (0);
         }
         else
             return (1);
