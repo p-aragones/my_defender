@@ -45,10 +45,16 @@ typedef struct health_s {
     sfText *text;
 } health_t;
 
+typedef struct money_s {
+    int money;
+    sfFont *font;
+    sfText *text;
+} money_t;
+
 typedef struct game_s {
     elem_t *elem;
     struct button_game_s **buttons;
-    int money;
+    money_t *money;
     health_t *health;
     tower_t **towers;
     wave_t **waves;

@@ -14,12 +14,12 @@ game_t *init_game(window_t *window)
     (void)window;
     if (game == NULL)
         return (NULL);
-    game->money = 20;
     game->buttons = init_buttons_game(window);
     game->waves = init_waves(game->waves);
     game->towers = init_towers();
     game->elem = create_elem(GAME_BG, POS_BG, RECT_BG);
     game->health = init_health();
+    game->money = init_money();
     sfSprite_setScale(game->elem->sprite, SCALE_BG);
     if (!game->buttons || !game->towers || !game->elem)
         return (NULL);
