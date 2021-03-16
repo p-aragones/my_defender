@@ -9,8 +9,9 @@
 #define STRUCT_GAME_H
 
 #include "struct.h"
-#include "struct_menu.h"
+#include "menu/struct_menu.h"
 #include "csfml_lib.h"
+#include "defender.h"
 
 typedef enum {
     SELECTED,
@@ -50,7 +51,8 @@ typedef struct game_s {
     struct button_game_s **buttons;
     int money;
     health_t *health;
-    tower_t **towers;
+    tower_t **towers_buttons;
+    struct control_s *towers;
     wave_t **waves;
 } game_t;
 

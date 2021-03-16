@@ -9,8 +9,7 @@
 
 void free_node(control_t *control, list_t *node)
 {
-    free(node->name);
-    free(node->value);
+    free(node->tower);
     if (!node->next)
         control->last = node->prev;
     free(node);

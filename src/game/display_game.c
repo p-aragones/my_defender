@@ -18,8 +18,8 @@ int display_game(window_t *window, game_t *game, clock_struct_t *clock)
         x++;
     }
     x = 0;
-    while (game->towers[x]) {
-        display(window->window, game->towers[x]->elem);
+    while (game->towers_buttons[x]) {
+        display(window->window, game->towers_buttons[x]->elem);
         x++;
     }
     sfRenderWindow_drawText(window->window, game->health->text, NULL);

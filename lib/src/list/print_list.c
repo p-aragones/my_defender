@@ -12,7 +12,7 @@ void print_list(list_t *list)
     list_t *temp = list;
 
     while (temp != NULL) {
-        my_printf("%s / %s\n", temp->name, temp->value);
+        my_printf("");
         temp = temp->next;
     }
 }

@@ -15,6 +15,7 @@
 #include <unistd.h>
 #include <stdio.h>
 
+#include "list.h"
 #include "csfml_lib.h"
 #include "defender.h"
 #include "struct_game.h"
@@ -28,7 +29,8 @@ button_game_t **init_buttons_game(window_t *window);
 
 wave_t *init_enemies(wave_t *);
 wave_t **init_waves(wave_t **);
-tower_t **init_towers(void);
+tower_t **init_towers_buttons(void);
+control_t *init_towers_struct(void);
 
 int display_game(window_t *window, game_t *menu, clock_struct_t *);
 void draw_enemies(wave_t *, sfRenderWindow *, clock_struct_t *);

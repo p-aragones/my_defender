@@ -12,14 +12,10 @@ void free_list(control_t *control)
 {
     while (control->first->next) {
         control->first = control->first->next;
-        free(control->first->prev->name);
-        free(control->first->prev->value);
+        free(control->first->prev->tower);
         free(control->first->prev);
     }
-    free(control->first->name);
-    free(control->first->value);
+    free(control->first->tower);
     free(control->first);
-    if (control->path)
-        free_array(control->path);
     free(control);
 }

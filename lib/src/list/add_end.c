@@ -7,9 +7,9 @@
 
 #include "lib.h"
 
-control_t *add_end(control_t *list, char *name, char *value)
+control_t *add_end(control_t *list, struct tower_s *tower)
 {
-    list_t *elem = create_elem_list(name, value);
+    list_t *elem = create_elem_list(tower);
 
     if (elem == NULL)
         return (NULL);
