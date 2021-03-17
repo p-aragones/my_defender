@@ -23,10 +23,17 @@ typedef struct fps_s {
     sfText *text;
 } fps_t;
 
+typedef struct howto_s {
+    elem_t *howto;
+    elem_t *howto_bg;
+    int status;
+} howto_t;
+
 typedef struct menu_s {
     elem_t *elem;
     struct button_s **buttons;
     sfMusic *music;
+    howto_t *howto;
     fps_t *fps;
 } menu_t;
 

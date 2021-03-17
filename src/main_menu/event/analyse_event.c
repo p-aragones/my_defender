@@ -28,6 +28,12 @@ void change_texture(window_t *window, button_t **buttons)
     }
 }
 
+void place_howto(int x, int status, menu_t *menu)
+{
+    menu->howto->howto_bg->pos.x = x;
+    menu->howto->status = status;
+}
+
 int analyse_event(window_t *window, sfEvent event,
 button_t **buttons, menu_t *menu)
 {
@@ -42,6 +48,11 @@ button_t **buttons, menu_t *menu)
                 return (buttons[x]->click_fonc(window, menu, buttons[x]));
             x++;
         }
+        if (event.type == sfEvtMouseButtonPressed &&
+            mouse_hover(window->window, menu->howto->howto->pos) == 1)
+            place_howto(0, 1, menu);
+        if (event.key.code == sfKeyEscape && menu->howto->status == 1)
+            place_howto(1920, 0, menu);
     }
     change_texture(window, buttons);
     return (0);

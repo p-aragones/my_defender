@@ -15,12 +15,14 @@ menu_t *init_main_menu(void)
         return (NULL);
     menu->buttons = init_buttons();
     menu->elem = create_elem(MENU_BACKGROUND, POS_BG, RECT_BG);
+    menu->howto = init_howto();
     sfSprite_setScale(menu->elem->sprite, SCALE_BG);
     menu->fps = init_fps();
     menu->music = sfMusic_createFromFile(MUSIC);
     sfMusic_play(menu->music);
     sfMusic_setLoop(menu->music, sfTrue);
-    if (!menu->buttons || !menu->elem || !menu->music || !menu->fps)
+    if (!menu->buttons || !menu->elem || !menu->music || !menu->fps
+    || !menu->howto)
         return (NULL);
     return (menu);
 }
