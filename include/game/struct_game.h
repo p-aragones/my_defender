@@ -43,12 +43,16 @@ typedef struct wave_s {
 
 typedef struct health_s {
     int health;
+    sfSprite *sprite;
+    sfTexture *texture;
     sfFont *font;
     sfText *text;
 } health_t;
 
 typedef struct money_s {
     int money;
+    sfSprite *sprite;
+    sfTexture *texture;
     sfFont *font;
     sfText *text;
 } money_t;

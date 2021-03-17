@@ -15,6 +15,11 @@ money_t *init_money(void)
         return (NULL);
     money->font = sfFont_createFromFile(FONT);
     money->text = sfText_create();
+    money->sprite = sfSprite_create();
+    money->texture = sfTexture_createFromFile(COIN, NULL);
+    sfSprite_setTexture(money->sprite, money->texture, sfFalse);
+    sfSprite_setScale(money->sprite, SCALE_COIN);
+    sfSprite_setPosition(money->sprite, COIN_POS);
     money->money = 1;
     if (!money->font || !money->text)
         return (NULL);

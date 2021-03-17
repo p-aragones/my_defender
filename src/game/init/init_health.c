@@ -15,6 +15,11 @@ health_t *init_health(void)
         return (NULL);
     health->font = sfFont_createFromFile(FONT);
     health->text = sfText_create();
+    health->sprite = sfSprite_create();
+    health->texture = sfTexture_createFromFile(HEART, NULL);
+    sfSprite_setTexture(health->sprite, health->texture, sfFalse);
+    sfSprite_setScale(health->sprite, SCALE_HEART);
+    sfSprite_setPosition(health->sprite, HEART_POS);
     health->health = 100;
     if (!health->font || !health->text)
         return (NULL);

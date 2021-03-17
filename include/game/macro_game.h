@@ -47,8 +47,14 @@ struct button_game_s *button)
 
 #define POS_HEALTH_TEXT (sfVector2f){X_WINDOW / 2 - 35, 50}
 #define FONT_SIZE_HEALTH 95
+#define HEART "resources/sprites/background/heart.png"
+#define HEART_POS (sfVector2f){X_WINDOW / 2 - 90, 105}
+#define SCALE_HEART (sfVector2f){0.05, 0.05}
 
 #define POS_MONEY_TEXT (sfVector2f){X_WINDOW / 2 - 35, 125}
 #define FONT_SIZE_MONEY 95
+#define COIN "resources/sprites/background/coin.png"
+#define COIN_POS (sfVector2f){X_WINDOW / 2 - 90, 180}
+#define SCALE_COIN (sfVector2f){0.025, 0.025}
 
 #endif /* !MACRO_GAME_H_ */
