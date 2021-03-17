@@ -32,9 +32,18 @@ tower_t *init_tower_elem(char *path, sfVector2f pos, sfIntRect rect)
 
 void init_tower_info(tower_t *tower, int power, int speed, int price)
 {
+    sfVector2f pos = tower->elem->pos;
+
+    pos.y -= 50;
+    pos.x -= 50;
     tower->power = power;
     tower->speed = speed;
     tower->price = price;
+    tower->money = sfText_create();
+    sfText_setString(tower->money, my_its(price));
+    sfText_setFont(tower->money, sfFont_createFromFile(FONT));
+    sfText_setCharacterSize(tower->money, SIZE_PRICE);
+    sfText_setPosition(tower->money, pos);
 }
 
 tower_t **init_towers_buttons(void)

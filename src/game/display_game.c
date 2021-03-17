@@ -16,6 +16,8 @@ int wave)
     display(window->window, game->elem);
     while (game->towers_buttons[x]) {
         display(window->window, game->towers_buttons[x]->elem);
+        sfRenderWindow_drawText(window->window,
+        game->towers_buttons[x]->money, NULL);
         x++;
     }
     sfRenderWindow_drawText(window->window, game->health->text, NULL);

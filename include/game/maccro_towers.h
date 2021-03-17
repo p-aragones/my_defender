@@ -32,10 +32,12 @@
 #define TOWER_3_ELEM PATH_TOWER_THREE, POS_TOWER_3, RECT_TOWER_3
 #define TOWER_4_ELEM PATH_TOWER_FOUR, POS_TOWER_4, RECT_TOWER_4
 
+#define SIZE_PRICE 100
+
 // [power, speed, price]
 
-#define TOWER_1_INFO 5, 50, 5
-#define TOWER_2_INFO 10, 30, 10
-#define TOWER_3_INFO 30, 40, 30
-#define TOWER_4_INFO 40, 30, 50
+#define TOWER_1_INFO 5, 50, 1
+#define TOWER_2_INFO 10, 30, 5
+#define TOWER_3_INFO 30, 40, 10
+#define TOWER_4_INFO 40, 30, 20
 #endif
