@@ -45,4 +45,6 @@ int twr_two_hover(button_game_t *button);
 health_t *init_health(void);
 money_t *init_money(void);
 
+int pause_menu(window_t *window);
+
 #endif

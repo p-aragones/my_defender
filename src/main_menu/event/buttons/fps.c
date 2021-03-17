@@ -11,17 +11,17 @@ int fps_click(window_t *window, menu_t *menu, struct button_s *button)
 {
     if (click(window, menu, button) == 84)
         return (84);
-    if (menu->fps->fps == 30) {
-        menu->fps->fps = 60;
-        sfText_setString(menu->fps->text, "60 FPS");
+    if (window->fps->fps == 30) {
+        window->fps->fps = 60;
+        sfText_setString(window->fps->text, "60 FPS");
         sfRenderWindow_setFramerateLimit(window->window, 60);
-    } else if (menu->fps->fps == 60) {
-        menu->fps->fps = 90;
-        sfText_setString(menu->fps->text, "90 FPS");
+    } else if (window->fps->fps == 60) {
+        window->fps->fps = 90;
+        sfText_setString(window->fps->text, "90 FPS");
         sfRenderWindow_setFramerateLimit(window->window, 90);
     } else {
-        menu->fps->fps = 30;
-        sfText_setString(menu->fps->text, "30 FPS");
+        window->fps->fps = 30;
+        sfText_setString(window->fps->text, "30 FPS");
         sfRenderWindow_setFramerateLimit(window->window, 30);
     }
     return (0);

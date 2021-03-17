@@ -7,6 +7,16 @@
 
 #include "defender.h"
 
+sfMusic *init_music(void)
+{
+    sfMusic *music = sfMusic_createFromFile(MUSIC);
+    sfMusic_play(music);
+    sfMusic_setLoop(music, sfTrue);
+    if (!music)
+        return (NULL);
+    return (music);
+}
+
 window_t *init_window(void)
 {
     window_t *window = malloc(sizeof(window_t));
@@ -19,5 +29,9 @@ window_t *init_window(void)
     window->window = sfRenderWindow_create(window->videoMode,
     "my_defender", sfClose, NULL);
     sfRenderWindow_setFramerateLimit(window->window, 60);
+    window->fps = init_fps();
+    window->music = init_music();
+    if (!window->window || !window->fps || !window->music)
+        return (NULL);
     return (window);
 }

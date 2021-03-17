@@ -2,12 +2,12 @@
 ** EPITECH PROJECT, 2020
 ** B-MUL-200-BAR-2-1-mydefender-leon.ducasse
 ** File description:
-** display_main_menu.c
+** display_pause.c
 */
 
-#include "main_menu.h"
+#include "pause.h"
 
-int display_main_menu(window_t *window, menu_t *menu)
+void display_pause(window_t *window, menu_t *menu)
 {
     int x = 0;
 
@@ -17,5 +17,4 @@ int display_main_menu(window_t *window, menu_t *menu)
         x++;
     }
     sfRenderWindow_drawText(window->window, window->fps->text, NULL);
-    return (0);
 }

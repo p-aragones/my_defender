@@ -10,6 +10,13 @@
 
 #include "csfml_lib.h"
 
+typedef struct fps_s {
+    int fps;
+    sfFont *font;
+    sfText *text;
+} fps_t;
+
+
 typedef struct clock_struct_s {
     sfClock *clock;
     sfTime time;
@@ -26,6 +33,8 @@ typedef struct elem_s {
 typedef struct window_s {
     sfRenderWindow *window;
     sfVideoMode videoMode;
+    fps_t *fps;
+    sfMusic *music;
 } window_t;
 
 #endif

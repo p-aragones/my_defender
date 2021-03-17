@@ -16,6 +16,7 @@
 int main_menu(window_t *);
 int defender(void);
 window_t *init_window(void);
+fps_t *init_fps(void);
 elem_t *create_elem(char *path, sfVector2f pos, sfIntRect rect);
 
 clock_struct_t *init_clock(void);

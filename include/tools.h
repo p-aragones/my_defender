@@ -22,6 +22,7 @@ int mouse_hover(sfRenderWindow *window, sfVector2f);
 void display(sfRenderWindow *window, elem_t *elem);
 
 void free_elem(elem_t *elem);
+void free_button(button_t *button);
 void free_buttons(button_t **buttons);
 
 int waiting_button(void);
