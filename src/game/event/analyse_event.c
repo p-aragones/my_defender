@@ -41,6 +41,8 @@ void check_enemies_pos(game_t *game, int wave)
         }
         i++;
     }
+    if (game->money->money >= 100)
+        game->money->money = 99;
 }
 
 int analyse_event_game(window_t *window, sfEvent event, game_t *game, int wave)

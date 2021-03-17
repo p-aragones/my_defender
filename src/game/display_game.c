@@ -14,11 +14,6 @@ int wave)
 
     (void)clock;
     display(window->window, game->elem);
-    while (game->buttons[x]) {
-        display(window->window, game->buttons[x]->elem);
-        x++;
-    }
-    x = 0;
     while (game->towers_buttons[x]) {
         display(window->window, game->towers_buttons[x]->elem);
         x++;
