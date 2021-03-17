@@ -69,7 +69,7 @@ sound_on_hover.png"
 #define FONT_SIZE_FPS 95
 
 #define HOWTO "resources/sprites/buttons/howto.png"
-#define POS_HOWTO (sfVector2f){0, 0}
+#define POS_HOWTO (sfVector2f){0, 410}
 #define RECT_HOWTO (sfIntRect){0, 0, 1120, 920}
 #define SCALE_HOWTO (sfVector2f){0.15, 0.15}
 
