@@ -21,7 +21,10 @@ game_t *init_game(window_t *window)
     game->elem = create_elem(GAME_BG, POS_BG, RECT_BG);
     game->health = init_health();
     game->money = init_money();
+    game->select = create_elem(SELECT, POS_SELECT, RECT_SELECT);
     sfSprite_setScale(game->elem->sprite, SCALE_BG);
+    sfSprite_setScale(game->select->sprite, SCALE_SELECT);
+    game->tower_selected = 0;
     if (!game->buttons || !game->towers_buttons ||
     !game->towers || !game->elem)
         return (NULL);

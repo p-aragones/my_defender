@@ -27,6 +27,7 @@ int wave)
     sfRenderWindow_drawText(window->window, game->money->text, NULL);
     sfRenderWindow_drawSprite(window->window, game->health->sprite, NULL);
     sfRenderWindow_drawSprite(window->window, game->money->sprite, NULL);
+    display(window->window, game->select);
     draw_enemies(game->waves[wave], window->window, clock);
     return (0);
 }

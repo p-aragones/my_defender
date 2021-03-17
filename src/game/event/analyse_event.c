@@ -11,11 +11,15 @@ int launch_action(window_t *window, sfEvent event, game_t *game)
 {
     int x = 0;
 
-    while (game->buttons[x]) {
+    while (game->towers_buttons[x]) {
         if (event.type == sfEvtMouseButtonPressed &&
-        mouse_hover(window->window, game->buttons[x]->elem->pos) == 1)
-            return (game->buttons[x]->click_fonc_g(window,
-            game, NULL));
+        mouse_hover(window->window, game->towers_buttons[x]->elem->pos) == 1) {
+            game->select->pos = game->towers_buttons[x]->elem->pos;
+            game->select->pos.x -= 10;
+            game->select->pos.y -= 10;
+            game->tower_selected = x;
+            return (0);
+        }
         x++;
     }
     return (-1);

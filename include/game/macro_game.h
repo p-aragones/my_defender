@@ -57,4 +57,9 @@ struct button_game_s *button)
 #define COIN_POS (sfVector2f){X_WINDOW / 2 - 90, 180}
 #define SCALE_COIN (sfVector2f){0.025, 0.025}
 
+#define SELECT "resources/sprites/twrs/selected.png"
+#define POS_SELECT (sfVector2f){1920, 0}
+#define RECT_SELECT (sfIntRect){0, 0, 48, 48}
+#define SCALE_SELECT (sfVector2f){1.7, 3}
+
 #endif /* !MACRO_GAME_H_ */

@@ -63,8 +63,10 @@ typedef struct game_s {
     money_t *money;
     health_t *health;
     tower_t **towers_buttons;
+    elem_t *select;
     struct control_s *towers;
     wave_t **waves;
+    int tower_selected;
 } game_t;
 
 typedef struct button_game_s {
