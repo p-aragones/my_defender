@@ -7,9 +7,21 @@
 
 #include "game.h"
 
+void place_tower(game_t *game, window_t *window)
+{
+    int x = game->tower_selected;
+
+    (void)window;
+    if (x >= 0 && game->money->money >= game->towers_buttons[x]->price) {
+        game->money->money -= game->towers_buttons[x]->price;
+        sfText_setString(game->money->text, my_its(game->money->money));
+    }
+}
+
 int launch_action(window_t *window, sfEvent event, game_t *game)
 {
     int x = 0;
+    int pos = get_y_mouse(window->window);
 
     while (game->towers_buttons[x]) {
         if (event.type == sfEvtMouseButtonPressed &&
@@ -21,6 +33,10 @@ int launch_action(window_t *window, sfEvent event, game_t *game)
             return (0);
         }
         x++;
+    }
+    if (event.type == sfEvtMouseButtonPressed && (pos < 600 || pos > 700)) {
+        place_tower(game, window);
+        return (0);
     }
     return (-1);
 }

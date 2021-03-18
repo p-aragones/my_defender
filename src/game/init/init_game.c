@@ -24,7 +24,7 @@ game_t *init_game(window_t *window)
     game->select = create_elem(SELECT, POS_SELECT, RECT_SELECT);
     sfSprite_setScale(game->elem->sprite, SCALE_BG);
     sfSprite_setScale(game->select->sprite, SCALE_SELECT);
-    game->tower_selected = 0;
+    game->tower_selected = -1;
     if (!game->buttons || !game->towers_buttons ||
     !game->towers || !game->elem)
         return (NULL);
