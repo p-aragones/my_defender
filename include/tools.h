@@ -29,4 +29,6 @@ int waiting_button(void);
 
 char *my_its(int);
 
+int check_button(button_t **buttons, int size);
+
 #endif

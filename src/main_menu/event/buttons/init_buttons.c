@@ -42,11 +42,11 @@ button_t *init_button_texture(button_t * button, char *hover, char *click)
     return (button);
 }
 
-int check_button(button_t **buttons)
+int check_button(button_t **buttons, int size)
 {
     int x = 0;
 
-    while (buttons[x]) {
+    while (x != size) {
         if (!buttons[x])
             return (84);
         x++;
@@ -73,7 +73,7 @@ button_t **init_buttons(void)
     buttons[3] = init_button_fonc(buttons[3], FPS_FONC_C);
     buttons[3] = init_button_texture(buttons[3], FPS_TEXTURE);
     buttons[4] = NULL;
-    if (check_button(buttons) == 84)
+    if (check_button(buttons, 4) == 84)
         return (NULL);
     return (buttons);
 }
