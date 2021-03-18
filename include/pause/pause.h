@@ -25,4 +25,6 @@ button_t *init_button_texture(button_t * button, char *hover, char *click);
 
 void display_pause(window_t *window, menu_t *menu);
 
+howto_t *init_howto(void);
+
 #endif
