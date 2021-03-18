@@ -34,7 +34,7 @@ int launch_action(window_t *window, sfEvent event, game_t *game)
         }
         x++;
     }
-    if (event.type == sfEvtMouseButtonPressed && (pos < 600 || pos > 700)) {
+    if (event.type == sfEvtMouseButtonPressed && (pos < 650 || pos > 800)) {
         place_tower(game, window);
         return (0);
     }
