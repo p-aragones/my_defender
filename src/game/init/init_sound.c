@@ -15,5 +15,7 @@ sound_t *init_sound(void)
         return (NULL);
     sound->oof = sfSound_create();
     sfSound_setBuffer(sound->oof, sfSoundBuffer_createFromFile(OOF));
+    sound->place = sfSound_create();
+    sfSound_setBuffer(sound->place, sfSoundBuffer_createFromFile(PLACE));
     return (sound);
 }

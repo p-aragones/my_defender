@@ -60,6 +60,7 @@ typedef struct money_s {
 
 typedef struct sound_s {
     sfSound *oof;
+    sfSound *place;
 } sound_t;
 
 typedef struct game_s {

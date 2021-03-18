@@ -65,5 +65,6 @@ struct button_game_s *button)
 // sound
 
 #define OOF "resources/sound/oof.ogg"
+#define PLACE "resources/sound/place.ogg"
 
 #endif /* !MACRO_GAME_H_ */

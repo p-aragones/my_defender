@@ -15,6 +15,7 @@ void place_tower(game_t *game, window_t *window)
     if (x >= 0 && game->money->money >= game->towers_buttons[x]->price) {
         game->money->money -= game->towers_buttons[x]->price;
         sfText_setString(game->money->text, my_its(game->money->money));
+        sfSound_play(game->sound->place);
     }
 }
 
