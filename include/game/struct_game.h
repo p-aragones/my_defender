@@ -58,6 +58,10 @@ typedef struct money_s {
     sfText *text;
 } money_t;
 
+typedef struct sound_s {
+    sfSound *oof;
+} sound_t;
+
 typedef struct game_s {
     elem_t *elem;
     struct button_game_s **buttons;
@@ -67,6 +71,7 @@ typedef struct game_s {
     elem_t *select;
     struct control_s *towers;
     wave_t **waves;
+    sound_t *sound;
     int tower_selected;
 } game_t;
 

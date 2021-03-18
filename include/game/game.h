@@ -44,5 +44,6 @@ int twr_two_hover(button_game_t *button);
 
 health_t *init_health(void);
 money_t *init_money(void);
+sound_t *init_sound(void);
 
 #endif

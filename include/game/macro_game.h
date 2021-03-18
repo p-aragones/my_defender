@@ -62,4 +62,8 @@ struct button_game_s *button)
 #define RECT_SELECT (sfIntRect){0, 0, 48, 48}
 #define SCALE_SELECT (sfVector2f){1.7, 3}
 
+// sound
+
+#define OOF "resources/sound/oof.ogg"
+
 #endif /* !MACRO_GAME_H_ */

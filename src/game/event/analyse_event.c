@@ -54,6 +54,7 @@ void check_enemies_pos(game_t *game, int wave)
             game->money->money += 1;
             game->waves[wave]->enemies_left -= 1;
             sfText_setString(game->money->text, my_its(game->money->money));
+            sfSound_play(game->sound->oof);
         }
         i++;
     }
