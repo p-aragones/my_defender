@@ -7,6 +7,16 @@
 
 #include "game.h"
 
+void display_towers(game_t *game, window_t *window)
+{
+    list_t *temp = game->towers->first;
+
+    while (temp) {
+        display(window->window, temp->tower->elem);
+        temp = temp->next;
+    }
+}
+
 int display_game(window_t *window, game_t *game, clock_struct_t *clock,
 int wave)
 {
@@ -26,6 +36,7 @@ int wave)
     sfRenderWindow_drawSprite(window->window, game->money->sprite, NULL);
     display(window->window, game->select);
     draw_enemies(game->waves[wave], window->window, clock);
+    display_towers(game, window);
     sfRenderWindow_display(window->window);
     return (0);
 }

@@ -10,12 +10,14 @@
 void place_tower(game_t *game, window_t *window)
 {
     int x = game->tower_selected;
+    sfVector2i pos = sfMouse_getPositionRenderWindow(window->window);
 
     (void)window;
     if (x >= 0 && game->money->money >= game->towers_buttons[x]->price) {
         game->money->money -= game->towers_buttons[x]->price;
         sfText_setString(game->money->text, my_its(game->money->money));
         sfSound_play(game->sound->place);
+        create_tower(x, game, pos);
     }
 }
 

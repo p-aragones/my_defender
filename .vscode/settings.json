@@ -1,5 +1,8 @@
 {
-    "files.associations": {
-        "main_menu.h": "c"
-    }
+  "files.associations": {
+    "main_menu.h": "c"
+  },
+  "files.exclude": {
+    "**/*.o": true
+  }
 }

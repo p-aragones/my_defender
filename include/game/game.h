@@ -29,8 +29,12 @@ button_game_t **init_buttons_game(window_t *window);
 
 wave_t *init_enemies(wave_t *);
 wave_t **init_waves(wave_t **);
+
 tower_t **init_towers_buttons(void);
 control_t *init_towers_struct(void);
+void init_tower_info(tower_t *tower, int power, int speed, int price);
+tower_t *init_tower_elem(char *path, sfVector2f pos, sfIntRect rect);
+void create_tower(int x, game_t *game, sfVector2i);
 
 int display_game(window_t *window, game_t *menu, clock_struct_t *, int);
 void draw_enemies(wave_t *, sfRenderWindow *, clock_struct_t *);
