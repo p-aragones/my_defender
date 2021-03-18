@@ -46,4 +46,6 @@ health_t *init_health(void);
 money_t *init_money(void);
 sound_t *init_sound(void);
 
+int pause_menu(window_t *window);
+
 #endif

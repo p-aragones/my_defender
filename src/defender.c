@@ -6,6 +6,7 @@
 */
 
 #include "defender.h"
+#include "pause.h"
 
 int defender(void)
 {
@@ -13,9 +14,5 @@ int defender(void)
 
     if (!window)
         return (84);
-    while (sfRenderWindow_isOpen(window->window)) {
-        if (main_menu(window) == 1)
-            return (0);
-    }
-    return (0);
+    return (main_menu(window));
 }

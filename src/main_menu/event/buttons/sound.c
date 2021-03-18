@@ -15,12 +15,12 @@ int sound_click(window_t *window, menu_t *menu, button_t *button)
         button->status = CLICK;
         sfSprite_setTexture(button->elem->sprite,
         button->click_texture, sfTrue);
-        sfMusic_setVolume(menu->music, 0);
+        sfMusic_setVolume(window->music, 0);
     } else {
         button->status = NONE;
         sfSprite_setTexture(button->elem->sprite,
         button->elem->texture, sfTrue);
-        sfMusic_setVolume(menu->music, 100);
+        sfMusic_setVolume(window->music, 100);
     }
     return (0);
 }
