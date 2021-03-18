@@ -20,6 +20,5 @@ fps_t *init_fps(void);
 elem_t *create_elem(char *path, sfVector2f pos, sfIntRect rect);
 
 clock_struct_t *init_clock(void);
-void clock_loop(clock_struct_t *clock);
 
 #endif

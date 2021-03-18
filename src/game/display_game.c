@@ -12,7 +12,7 @@ int wave)
 {
     int x = 0;
 
-    (void)clock;
+    sfRenderWindow_clear(window->window, sfBlack);
     display(window->window, game->elem);
     while (game->towers_buttons[x]) {
         display(window->window, game->towers_buttons[x]->elem);
@@ -26,5 +26,6 @@ int wave)
     sfRenderWindow_drawSprite(window->window, game->money->sprite, NULL);
     display(window->window, game->select);
     draw_enemies(game->waves[wave], window->window, clock);
+    sfRenderWindow_display(window->window);
     return (0);
 }

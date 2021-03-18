@@ -23,7 +23,6 @@ void draw_enemies(wave_t *wave, sfRenderWindow *window, clock_struct_t *clock)
         wave->enemies[0]->elem->rect);
         sfRenderWindow_drawSprite(window, wave->enemies[i]->elem->sprite,
         sfFalse);
-        wave->enemies[i]->elem->pos.x -= wave->enemies[i]->speed;
         sfSprite_setPosition(wave->enemies[i]->elem->sprite,
         wave->enemies[i]->elem->pos);
         i++;

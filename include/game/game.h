@@ -48,4 +48,6 @@ sound_t *init_sound(void);
 
 int pause_menu(window_t *window);
 
+void clock_loop(clock_struct_t *clock, wave_t *);
+
 #endif
