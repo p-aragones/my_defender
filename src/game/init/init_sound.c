@@ -9,7 +9,7 @@
 
 sound_t *init_sound(void)
 {
-    sound_t *sound = malloc(sizeof(sound));
+    sound_t *sound = malloc(sizeof(sound_t));
 
     if (!sound)
         return (NULL);
