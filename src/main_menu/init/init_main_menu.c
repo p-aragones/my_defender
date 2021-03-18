@@ -17,16 +17,7 @@ menu_t *init_main_menu(void)
     menu->elem = create_elem(MENU_BACKGROUND, POS_BG, RECT_BG);
     menu->howto = init_howto();
     sfSprite_setScale(menu->elem->sprite, SCALE_BG);
-<<<<<<< HEAD
-    menu->fps = init_fps();
-    menu->music = sfMusic_createFromFile(MUSIC);
-    sfMusic_play(menu->music);
-    sfMusic_setLoop(menu->music, sfTrue);
-    if (!menu->buttons || !menu->elem || !menu->music || !menu->fps
-    || !menu->howto)
-=======
-    if (!menu->buttons || !menu->elem)
->>>>>>> pause_menu
+    if (!menu->buttons || !menu->elem || !menu->howto)
         return (NULL);
     return (menu);
 }

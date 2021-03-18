@@ -17,13 +17,6 @@ typedef enum {
     NONE
 } status_t;
 
-<<<<<<< HEAD
-typedef struct fps_s {
-    int fps;
-    sfFont *font;
-    sfText *text;
-} fps_t;
-
 typedef struct howto_s {
     elem_t *howto;
     elem_t *howto_bg;
@@ -33,14 +26,7 @@ typedef struct howto_s {
 typedef struct menu_s {
     elem_t *elem;
     struct button_s **buttons;
-    sfMusic *music;
     howto_t *howto;
-    fps_t *fps;
-=======
-typedef struct menu_s {
-    elem_t *elem;
-    struct button_s **buttons;
->>>>>>> pause_menu
 } menu_t;
 
 typedef struct button_s {

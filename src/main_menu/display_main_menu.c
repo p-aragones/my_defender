@@ -18,11 +18,7 @@ int display_main_menu(window_t *window, menu_t *menu)
         display(window->window, menu->buttons[x]->elem);
         x++;
     }
-<<<<<<< HEAD
-    sfRenderWindow_drawText(window->window, menu->fps->text, NULL);
-    display(window->window, menu->howto->howto_bg);
-=======
     sfRenderWindow_drawText(window->window, window->fps->text, NULL);
->>>>>>> pause_menu
+    display(window->window, menu->howto->howto_bg);
     return (0);
 }
