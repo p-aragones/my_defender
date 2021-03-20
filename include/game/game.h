@@ -57,4 +57,6 @@ clock_struct_t *refresh_clock(clock_struct_t *);
 
 void shoot(game_t *game, int wave);
 
+void free_game(game_t *game);
+
 #endif

@@ -11,8 +11,10 @@ int next_wave(game_t *game, int *wave)
 {
     if (game->waves[*wave]->enemies_left == 0)
         *wave += 1;
-    if (*wave == N_WAVES)
+    if (*wave == N_WAVES) {
+        free_game(game);
         return (1);
+    }
     return (0);
 }
 
