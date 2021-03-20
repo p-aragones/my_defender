@@ -12,7 +12,6 @@ int exit_click(window_t *window, menu_t *menu, button_t *button)
     if (click(window, menu, button) == 84)
         return (84);
     free_main_menu(menu);
-    sfRenderWindow_close(window->window);
-    free(window);
+    free_window(window);
     return (1);
 }

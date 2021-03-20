@@ -10,6 +10,9 @@
 
 void free_main_menu(menu_t *menu)
 {
+    free_elem(menu->howto->howto);
+    free_elem(menu->howto->howto_bg);
+    free (menu->howto);
     free_elem(menu->elem);
     free_buttons(menu->buttons);
 }

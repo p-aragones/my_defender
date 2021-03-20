@@ -24,6 +24,7 @@ void display(sfRenderWindow *window, elem_t *elem);
 void free_elem(elem_t *elem);
 void free_button(button_t *button);
 void free_buttons(button_t **buttons);
+void free_window(window_t *window);
 
 int waiting_button(void);
 
