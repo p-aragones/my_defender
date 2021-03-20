@@ -30,13 +30,13 @@ int wave)
         game->towers_buttons[x]->money, NULL);
         x++;
     }
+    draw_enemies(game->waves[wave], window->window, clock);
+    display_towers(game, window);
+    display(window->window, game->select);
     sfRenderWindow_drawText(window->window, game->health->text, NULL);
     sfRenderWindow_drawText(window->window, game->money->text, NULL);
     sfRenderWindow_drawSprite(window->window, game->health->sprite, NULL);
     sfRenderWindow_drawSprite(window->window, game->money->sprite, NULL);
-    display(window->window, game->select);
-    draw_enemies(game->waves[wave], window->window, clock);
-    display_towers(game, window);
     sfRenderWindow_display(window->window);
     return (0);
 }

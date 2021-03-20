@@ -7,6 +7,15 @@
 
 #include "game.h"
 
+int next_wave(game_t *game, int *wave)
+{
+    if (game->waves[*wave]->enemies_left == 0)
+        *wave += 1;
+    if (*wave == N_WAVES)
+        return (1);
+    return (0);
+}
+
 int game(window_t *window)
 {
     sfEvent event;
@@ -25,8 +34,8 @@ int game(window_t *window)
         clock_loop(clock_movement, game->waves[wave]);
         display_game(window, game, clock_sprite, wave);
         shoot(game, wave);
-        if (game->waves[wave]->enemies_left == 0)
-            wave++;
+        if (next_wave(game, &wave) != 0)
+            return (1);
     }
     return (1);
 }
