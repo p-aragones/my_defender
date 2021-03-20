@@ -24,6 +24,7 @@ int game(window_t *window)
             return (in_game);
         clock_loop(clock_movement, game->waves[wave]);
         display_game(window, game, clock_sprite, wave);
+        shoot(game, wave);
         if (game->waves[wave]->enemies_left == 0)
             wave++;
     }

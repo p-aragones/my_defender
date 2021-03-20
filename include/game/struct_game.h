@@ -21,6 +21,7 @@ typedef enum {
 typedef struct tower_s {
     elem_t *elem;
     sfText *money;
+    clock_struct_t *clock;
     int type;
     int power;
     int speed;

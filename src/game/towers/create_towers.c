@@ -15,6 +15,7 @@ void create_tower_one(game_t *game, sfVector2i pos)
     init_tower_info(new_tower, TOWER_1_INFO);
     new_tower->elem->pos.x = pos.x - 12;
     new_tower->elem->pos.y = pos.y - 80;
+    new_tower->clock = init_clock();
     game->towers = add_start(game->towers, new_tower);
 }
 
@@ -26,6 +27,7 @@ void create_tower_two(game_t *game, sfVector2i pos)
     init_tower_info(new_tower, TOWER_2_INFO);
     new_tower->elem->pos.x = pos.x - 12;
     new_tower->elem->pos.y = pos.y - 80;
+    new_tower->clock = init_clock();
     game->towers = add_start(game->towers, new_tower);
 }
 
@@ -37,6 +39,7 @@ void create_tower_three(game_t *game, sfVector2i pos)
     init_tower_info(new_tower, TOWER_3_INFO);
     new_tower->elem->pos.x = pos.x - 12;
     new_tower->elem->pos.y = pos.y - 80;
+    new_tower->clock = init_clock();
     game->towers = add_start(game->towers, new_tower);
 }
 
@@ -48,6 +51,7 @@ void create_tower_four(game_t *game, sfVector2i pos)
     init_tower_info(new_tower, TOWER_4_INFO);
     new_tower->elem->pos.x = pos.x - 12;
     new_tower->elem->pos.y = pos.y - 80;
+    new_tower->clock = init_clock();
     game->towers = add_start(game->towers, new_tower);
 }
 
