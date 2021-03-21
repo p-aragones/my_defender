@@ -40,6 +40,7 @@ void init_tower_info(tower_t *tower, int power, int speed, int price)
     tower->speed = speed;
     tower->price = price;
     tower->money = sfText_create();
+    tower->range = 700;
     sfText_setString(tower->money, my_its(price));
     sfText_setFont(tower->money, sfFont_createFromFile(FONT));
     sfText_setCharacterSize(tower->money, SIZE_PRICE);

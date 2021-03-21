@@ -26,6 +26,7 @@ typedef struct tower_s {
     int power;
     int speed;
     int price;
+    int range;
 } tower_t;
 
 typedef struct enemy_s {
