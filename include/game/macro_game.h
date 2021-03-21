@@ -49,6 +49,10 @@ struct button_game_s *button)
 #define HYENA_RECT (sfIntRect){0, 0, 48, 48}
 #define HYENA_POS (sfVector2f){2000, 650}
 
+#define VULTURE "resources/sprites/vulture/Vulture_walk.png"
+#define VULTURE_RECT (sfIntRect){0, 0, 48, 48}
+#define VULTURE_POS (sfVector2f){2000, 650}
+
 #define POS_HEALTH_TEXT (sfVector2f){X_WINDOW / 2 - 35, 50}
 #define FONT_SIZE_HEALTH 95
 #define HEART "resources/sprites/background/heart.png"
