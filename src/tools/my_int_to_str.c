@@ -17,7 +17,7 @@ char *my_its(int nbr)
         str[1] = nbr % 10 + 48;
         str[2] = '\0';
     } else {
-        str = malloc(sizeof(char) *2);
+        str = malloc(sizeof(char) * 2);
         str[0] = nbr + 48;
         str[1] = '\0';
     }
