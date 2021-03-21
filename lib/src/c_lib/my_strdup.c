@@ -17,7 +17,7 @@ char *my_strdup(char const *src)
     str = malloc(sizeof(char) * (len + 1));
     if (str == NULL)
         return (NULL);
-    while (src[i]){
+    while (src[i]) {
         str[i] = src[i];
         i++;
     }

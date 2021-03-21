@@ -17,12 +17,12 @@ int my_getnbr(char const *str, int i)
     int nbr = 0;
     int sign = 1;
 
-    while (str[i] && (str[i] == '-' || str[i] == '+')){
+    while (str[i] && (str[i] == '-' || str[i] == '+')) {
         if (str[i] == '-')
             sign = sign * - 1;
         i++;
     }
-    while (is_digit(str[i]) == 1){
+    while (is_digit(str[i]) == 1) {
         if (nbr >= 247483647)
             return (0);
         nbr = nbr * 10;

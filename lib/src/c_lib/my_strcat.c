@@ -15,11 +15,11 @@ char *my_strcat(char *dest, char const *src)
 
     if (!res)
         return (NULL);
-    while (dest[i]){
+    while (dest[i]) {
         res[i] = dest[i];
         i++;
     }
-    while (src[n]){
+    while (src[n]) {
         res[i] = src[n];
         i++;
         n++;
