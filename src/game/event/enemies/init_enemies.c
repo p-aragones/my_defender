@@ -20,7 +20,7 @@ wave_t *init_enemies(wave_t *waves)
         if (waves->enemies[enemy] == NULL)
             return (NULL);
         waves->enemies[enemy]->damage = 2;
-        waves->enemies[enemy]->health = 10;
+        waves->enemies[enemy]->health = 10 + waves->wave;
         waves->enemies[enemy]->speed = 4;
         waves->enemies[enemy]->pos = SNAKE_POS;
         waves->enemies[enemy]->pos.x += 100 * enemy;

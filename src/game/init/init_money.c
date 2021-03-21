@@ -20,7 +20,7 @@ money_t *init_money(void)
     sfSprite_setTexture(money->sprite, money->texture, sfFalse);
     sfSprite_setScale(money->sprite, SCALE_COIN);
     sfSprite_setPosition(money->sprite, COIN_POS);
-    money->money = 1;
+    money->money = 5;
     if (!money->font || !money->text)
         return (NULL);
     sfText_setString(money->text, my_its(money->money));

@@ -36,8 +36,8 @@
 
 // [power, speed, price]
 
-#define TOWER_1_INFO 5, 1, 1
-#define TOWER_2_INFO 10, 2, 5
-#define TOWER_3_INFO 30, 3, 10
-#define TOWER_4_INFO 40, 4, 20
+#define TOWER_1_INFO 5, 1, 5
+#define TOWER_2_INFO 10, 1, 10
+#define TOWER_3_INFO 30, 2, 20
+#define TOWER_4_INFO 40, 3, 30
 #endif
