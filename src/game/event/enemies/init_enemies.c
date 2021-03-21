@@ -16,7 +16,7 @@ wave_t *init_enemy_snake(wave_t *waves)
         waves->enemies[enemy] = malloc(sizeof(enemy_t));
         if (waves->enemies[enemy] == NULL)
             return (NULL);
-        waves->enemies[enemy]->damage = 2;
+        waves->enemies[enemy]->damage = 5;
         waves->enemies[enemy]->health = 7;
         waves->enemies[enemy]->speed = 2;
         waves->enemies[enemy]->pos = SNAKE_POS;
@@ -37,7 +37,7 @@ wave_t *init_enemy_hyena(wave_t *waves)
         waves->enemies[enemy] = malloc(sizeof(enemy_t));
         if (waves->enemies[enemy] == NULL)
             return (NULL);
-        waves->enemies[enemy]->damage = 1;
+        waves->enemies[enemy]->damage = 2;
         waves->enemies[enemy]->health = 15;
         waves->enemies[enemy]->speed = 4;
         waves->enemies[enemy]->pos = HYENA_POS;

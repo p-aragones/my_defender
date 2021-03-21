@@ -37,7 +37,7 @@ int game(window_t *window)
         display_game(window, game, clock_sprite, wave);
         shoot(game, wave);
         if (next_wave(game, &wave) != 0)
-            return (1);
+            return (main_menu(window));
     }
     return (1);
 }
