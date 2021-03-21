@@ -8,20 +8,17 @@
 #include "game.h"
 #include "lib.h"
 
-wave_t *init_enemies(wave_t *waves)
+wave_t *init_enemy_snake(wave_t *waves)
 {
     int enemy = 0;
-    waves->enemies = malloc(sizeof(enemy_t *) * (waves->n_enemies + 1));
 
-    if (!waves->enemies)
-        return (NULL);
     while (enemy < waves->n_enemies) {
         waves->enemies[enemy] = malloc(sizeof(enemy_t));
         if (waves->enemies[enemy] == NULL)
             return (NULL);
         waves->enemies[enemy]->damage = 2;
         waves->enemies[enemy]->health = 10 + waves->wave;
-        waves->enemies[enemy]->speed = 4;
+        waves->enemies[enemy]->speed = 2;
         waves->enemies[enemy]->pos = SNAKE_POS;
         waves->enemies[enemy]->pos.x += 100 * enemy;
         waves->enemies[enemy]->elem = create_elem(SNAKE,
@@ -29,5 +26,39 @@ wave_t *init_enemies(wave_t *waves)
         enemy++;
     }
     waves->enemies[enemy] = NULL;
+    return (waves);
+}
+
+wave_t *init_enemy_hyena(wave_t *waves)
+{
+    int enemy = 0;
+
+    while (enemy < waves->n_enemies) {
+        waves->enemies[enemy] = malloc(sizeof(enemy_t));
+        if (waves->enemies[enemy] == NULL)
+            return (NULL);
+        waves->enemies[enemy]->damage = 1;
+        waves->enemies[enemy]->health = 15 + waves->wave;
+        waves->enemies[enemy]->speed = 4;
+        waves->enemies[enemy]->pos = HYENA_POS;
+        waves->enemies[enemy]->pos.x += 100 * enemy;
+        waves->enemies[enemy]->elem = create_elem(HYENA,
+        waves->enemies[enemy]->pos, HYENA_RECT);
+        enemy++;
+    }
+    waves->enemies[enemy] = NULL;
+    return (waves);
+}
+
+wave_t *init_enemies(wave_t *waves)
+{
+    waves->enemies = malloc(sizeof(enemy_t *) * (waves->n_enemies + 1));
+
+    if (!waves->enemies)
+        return (NULL);
+    if (waves->wave % 2 != 0)
+        init_enemy_snake(waves);
+    else
+        init_enemy_hyena(waves);
     return (waves);
 }
