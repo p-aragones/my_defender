@@ -69,10 +69,9 @@ int analyse_event_game(window_t *window, sfEvent event, game_t *game, int wave)
 {
     check_enemies_pos(game, wave);
     while (sfRenderWindow_pollEvent(window->window, &event)) {
-        if (event.type == sfEvtClosed)
-            sfRenderWindow_close(window->window);
         if (event.key.code == sfKeyEscape)
-            pause_menu(window);
+            if (pause_menu(window) == 1)
+                return (1);
         if (launch_action(window, event, game) == 84)
             return (84);
     }

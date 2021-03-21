@@ -12,5 +12,5 @@ int resume(window_t *window, menu_t *menu, button_t *button)
     (void)window;
     (void)button;
     free_elem(menu->elem);
-    return (1);
+    return (2);
 }

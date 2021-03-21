@@ -49,10 +49,6 @@ button_t **buttons, menu_t *menu)
     int x = 0;
 
     while (sfRenderWindow_pollEvent(window->window, &event)) {
-        if (event.type == sfEvtClosed) {
-            sfRenderWindow_close(window->window);
-            return (0);
-        }
         while (buttons[x]) {
             if (event.type == sfEvtMouseButtonPressed &&
             mouse_hover(window->window, buttons[x]->elem->pos) == 1)

@@ -32,7 +32,7 @@ int game(window_t *window)
     while (!in_game && sfRenderWindow_isOpen(window->window)) {
         in_game = analyse_event_game(window, event, game, wave);
         if (in_game != 0)
-            return (in_game);
+            return (1);
         clock_loop(clock_movement, game->waves[wave]);
         display_game(window, game, clock_sprite, wave);
         shoot(game, wave);

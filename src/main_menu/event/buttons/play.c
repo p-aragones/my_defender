@@ -11,6 +11,5 @@ int play_click(window_t *window, menu_t *menu, button_t *button)
 {
     if (click(window, menu, button) == 84)
         return (84);
-    game(window);
-    return (0);
+    return (game(window));
 }
